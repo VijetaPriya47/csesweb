@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcsesweb=self.webpackChunkcsesweb||[]).push([[7897],{9349:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/csesweb/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
