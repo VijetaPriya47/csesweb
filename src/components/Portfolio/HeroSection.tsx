@@ -1,14 +1,17 @@
 import React from 'react';
 import Avatar from '@site/src/components/Common/Avatar';
 import GitHubButton from '@site/src/components/Common/GitHubButton';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function HeroSection() {
+  const profileImageUrl = useBaseUrl('/img/vijeta-priya.jpg');
+  const resumeUrl = useBaseUrl('/resume.pdf');
   return (
     <section className="hero-section">
       <div className="hero-content">
         <div className="hero-avatar">
           <Avatar 
-            src="/img/vijeta-priya.jpg" 
+            src={profileImageUrl}
             alt="Vijeta Priya" 
             size="xl"
           />
@@ -24,7 +27,7 @@ export default function HeroSection() {
           </p>
           <div className="hero-actions">
             <GitHubButton 
-              href="/resume.pdf" 
+              href={resumeUrl}
               variant="primary" 
               size="lg"
             >
