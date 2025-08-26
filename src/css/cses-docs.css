@@ -1,0 +1,338 @@
+/* CSES Solutions Documentation - USACO Guide Blue Theme */
+
+/* Main Documentation Layout */
+[data-theme='light'] .theme-doc-sidebar-container {
+  background: #f8f9fa;
+  border-right: 1px solid #e1e4e8;
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  background: #161b22;
+  border-right: 1px solid #30363d;
+}
+
+/* Sidebar Styling */
+.theme-doc-sidebar-menu {
+  background: transparent;
+}
+
+.theme-doc-sidebar-item-category-level-1 > .theme-doc-sidebar-item-link {
+  color: #0366d6;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin: 0.25rem 0;
+}
+
+.theme-doc-sidebar-item-category-level-1 > .theme-doc-sidebar-item-link:hover {
+  background: #f1f8ff;
+  color: #0256cc;
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-category-level-1 > .theme-doc-sidebar-item-link:hover {
+  background: #0c2d6b;
+  color: #58a6ff;
+}
+
+/* Problem Solution Styling */
+.theme-doc-markdown {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Problem Statement Box */
+.problem-statement {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+[data-theme='dark'] .problem-statement {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+.problem-statement h3 {
+  color: #0366d6;
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Input/Output Sections */
+.input-output-section {
+  background: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] .input-output-section {
+  background: #21262d;
+  border-color: #30363d;
+}
+
+.input-output-section h4 {
+  color: #24292e;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .input-output-section h4 {
+  color: #f0f6fc;
+}
+
+/* Code Blocks */
+.theme-code-block {
+  margin: 1.5rem 0;
+}
+
+.theme-code-block pre {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+[data-theme='dark'] .theme-code-block pre {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+/* Solution Approach Cards */
+.solution-approach {
+  background: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .solution-approach {
+  background: #21262d;
+  border-color: #30363d;
+}
+
+.solution-approach h3 {
+  color: #0366d6;
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Complexity Section */
+.complexity-section {
+  background: #f1f8ff;
+  border: 1px solid #c8e1ff;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] .complexity-section {
+  background: #0c2d6b;
+  border-color: #1f6feb;
+}
+
+.complexity-section h4 {
+  color: #0366d6;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+/* Key Insights */
+.key-insights {
+  background: #fff8dc;
+  border: 1px solid #f0e68c;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] .key-insights {
+  background: #2d1b0c;
+  border-color: #8b4513;
+}
+
+.key-insights h4 {
+  color: #b8860b;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+/* Practice Problems */
+.practice-problems {
+  background: #f0f8ff;
+  border: 1px solid #b0d4f1;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] .practice-problems {
+  background: #0c1b2d;
+  border-color: #1f4b6b;
+}
+
+.practice-problems h4 {
+  color: #0366d6;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+/* Related Topics */
+.related-topics {
+  background: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] .related-topics {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+.related-topics h4 {
+  color: #586069;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .related-topics h4 {
+  color: #7d8590;
+}
+
+/* Navigation Breadcrumbs */
+.theme-doc-breadcrumbs {
+  background: #f6f8fa;
+  border-bottom: 1px solid #e1e4e8;
+  padding: 0.75rem 2rem;
+}
+
+[data-theme='dark'] .theme-doc-breadcrumbs {
+  background: #161b22;
+  border-bottom-color: #30363d;
+}
+
+/* Table of Contents */
+.theme-doc-toc-desktop {
+  background: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+[data-theme='dark'] .theme-doc-toc-desktop {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+/* Links */
+.theme-doc-markdown a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.theme-doc-markdown a:hover {
+  color: #0256cc;
+  text-decoration: underline;
+}
+
+/* Headers */
+.theme-doc-markdown h1 {
+  color: #24292e;
+  border-bottom: 2px solid #0366d6;
+  padding-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .theme-doc-markdown h1 {
+  color: #f0f6fc;
+}
+
+.theme-doc-markdown h2 {
+  color: #24292e;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 0.25rem;
+}
+
+[data-theme='dark'] .theme-doc-markdown h2 {
+  color: #f0f6fc;
+  border-bottom-color: #30363d;
+}
+
+/* Lists */
+.theme-doc-markdown ul,
+.theme-doc-markdown ol {
+  padding-left: 1.5rem;
+}
+
+.theme-doc-markdown li {
+  margin: 0.25rem 0;
+}
+
+/* Blockquotes */
+.theme-doc-markdown blockquote {
+  background: #f6f8fa;
+  border-left: 4px solid #0366d6;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+[data-theme='dark'] .theme-doc-markdown blockquote {
+  background: #161b22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .theme-doc-markdown {
+    padding: 1rem;
+  }
+  
+  .solution-approach,
+  .problem-statement {
+    padding: 1rem;
+  }
+}
+
+/* Custom Classes for Problem Solutions */
+.problem-example {
+  background: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+[data-theme='dark'] .problem-example {
+  background: #161b22;
+  border-color: #30363d;
+}
+
+.constraints-list {
+  list-style: none;
+  padding: 0;
+}
+
+.constraints-list li {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+[data-theme='dark'] .constraints-list li {
+  background: #161b22;
+  border-color: #30363d;
+}

@@ -28,3 +28,59 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Reduce navbar padding */
+.navbar {
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar__inner {
+  padding: 0 !important;
+}
+
+.navbar__brand {
+  padding: 0.25rem 0 !important;
+}
+
+.navbar__item {
+  padding: 0.25rem 0.5rem !important;
+}
+
+.navbar__link {
+  padding: 0.25rem 0.5rem !important;
+}
+
+/* Style skip to main content link */
+div[role="region"][aria-label="Skip to main content"] {
+  position: relative;
+  display: block !important;
+  visibility: visible !important;
+  background: transparent;
+  color: #586069;
+  padding: 4px 8px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+div[role="region"][aria-label="Skip to main content"]:hover {
+  color: #0366d6;
+  text-decoration: underline;
+}
+
+div[role="region"][aria-label="Skip to main content"]:focus {
+  outline: 1px solid #0366d6;
+  outline-offset: 1px;
+}
+
+/* Dark mode support */
+[data-theme='dark'] div[role="region"][aria-label="Skip to main content"] {
+  color: #8b949e;
+}
+
+[data-theme='dark'] div[role="region"][aria-label="Skip to main content"]:hover {
+  color: #58a6ff;
+}

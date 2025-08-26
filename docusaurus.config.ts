@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Vijeta Priya',
+  tagline: 'Software Engineer & Competitive Programmer',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -26,7 +26,7 @@ const config: Config = {
   projectName: 'csesweb', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -46,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/VijetaPriya47/csesweb/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -57,14 +57,14 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/VijetaPriya47/csesweb/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css', './src/css/portfolio.css', './src/css/cses-docs.css', './src/css/animations.css'],
         },
       } satisfies Preset.Options,
     ],
@@ -74,71 +74,81 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Vijeta Priya',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Vijeta Priya Logo',
         src: 'img/logo.svg',
       },
       items: [
+        {to: '/', label: 'Home', position: 'left'},
+        {to: '/projects', label: 'Projects', position: 'left'},
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'csesSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'CSES Solutions',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/VijetaPriya47',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    },
+          footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Portfolio',
+            items: [
+              {
+                label: 'Home',
+                to: '/',
+              },
+              {
+                label: 'Projects',
+                to: '/projects',
+              },
+              {
+                label: 'CSES Solutions',
+                to: '/docs/cses/intro',
+              },
+            ],
+          },
+          {
+            title: 'Connect',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/VijetaPriya47',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://linkedin.com/in/vijeta-priya',
+              },
+              {
+                label: 'Codeforces',
+                href: 'https://codeforces.com/profile/vijetapriya',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: 'Resume',
+                href: '#',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Vijeta Priya. Built with Docusaurus.`,
+      },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
