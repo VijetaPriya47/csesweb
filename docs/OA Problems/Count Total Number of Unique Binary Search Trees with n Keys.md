@@ -136,6 +136,3 @@ Hence, there are **5 unique BSTs** possible with 3 keys.
 Reference: [Enjoy Algorithms Blog](https://www.enjoyalgorithms.com/blog/total-number-of-binary-search-trees-with-n-keys)
 
 
-
-Do you want me to keep **LaTeX math with `$$...$$`** (for pretty rendering, if your docs support `remark-math/rehype-katex`), or is it safer for you to stick with **plain fenced text/code blocks** (guaranteed MDX-safe)?
-```
