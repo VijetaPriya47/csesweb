@@ -315,3 +315,260 @@ Feel free to ask if you want me to explain specific parts in detail!
 [7](https://takeuforward.org/graph/bridges-in-graph-using-tarjans-algorithm-of-time-in-and-low-time-g-55/)
 [8](https://usaco.guide/adv/SCC)
 [9](https://www.scaler.in/strongly-connected-components/)
+
+***
+```cpp
+#pragma GCC optimize (3,"Ofast","inline")
+#include <bits/stdc++.h>
+using namespace std;
+using i64 = long long;
+const int MOD = 998244353;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int casenum;
+    cin >> casenum;
+    while (casenum--) {
+        int n, m, V;
+        cin >> n >> m >> V;
+
+        vector<int> num(n + 1);
+        for (int i = 1; i <= n; ++i) cin >> num[i];
+
+        /* ---------- build graph with doubled edge ids ---------- */
+        vector<vector<pair<int,int>>> e(n + 1);
+        for (int i = 1; i <= m; ++i) {
+            int u, v; cin >> u >> v;
+            e[u].push_back({v, i << 1});
+            e[v].push_back({u, i << 1 | 1});
+        }
+
+        /* ---------- Tarjan to extract BCCs ---------- */
+        int cnt = 0;
+        vector<int> dfn(n + 1), low(n + 1);
+        vector<vector<int>> bccs;
+        stack<int> st;
+
+        auto tarjan = [&](auto&& self, int u, int pe) -> void {
+            dfn[u] = low[u] = ++cnt;
+            st.push(u);
+            for (auto [v, id] : e[u]) {
+                if (id == (pe ^ 1)) continue;
+                if (!dfn[v]) {
+                    self(self, v, id);
+                    low[u] = min(low[u], low[v]);
+                } else
+                    low[u] = min(low[u], dfn[v]);
+            }
+            if (dfn[u] == low[u]) {
+                vector<int> comp;
+                comp.push_back(u);
+                while (st.top() != u) {
+                    comp.push_back(st.top());
+                    st.pop();
+                }
+                st.pop();
+                bccs.push_back(move(comp));
+            }
+        };
+
+        for (int i = 1; i <= n; ++i)
+            if (!dfn[i]) tarjan(tarjan, i, 0);
+
+        /* ---------- bipartite test helper ---------- */
+        vector<int> col(n + 1);
+        vector<char> in(n + 1);
+
+        auto bipartite = [&](auto&& self, int u, int pe, int c) -> bool {
+            if (!in[u]) return true;
+            if (col[u]) return col[u] == c;
+            col[u] = c;
+            bool ok = true;
+            for (auto [v, id] : e[u])
+                if (id != (pe ^ 1))
+                    ok &= self(self, v, id, c ^ 1);
+            return ok;
+        };
+
+        /* ---------- evaluate every BCC ---------- */
+        bool ok = true;
+        i64 ways = 1;
+
+        for (auto& comp : bccs) {
+            for (int v : comp) in[v] = 1;
+            bool isBip = bipartite(bipartite, comp[0], 0, 1);
+            for (int v : comp) in[v] = 0;
+
+            vector<int> fixed;
+            for (int v : comp) if (num[v] != -1) fixed.push_back(num[v]);
+
+            if (!fixed.empty()) {
+                for (size_t i = 1; i < fixed.size(); ++i)
+                    if (fixed[i] != fixed[0]) ok = false;
+            }
+
+            if (!ok) { ways = 0; break; }
+
+            if (isBip) {
+                if (fixed.empty())
+                    ways = ways * V % MOD;
+            } else {                          // odd cycle: XOR must be 0
+                if (!fixed.empty() && fixed[0] != 0)
+                    ways = 0;
+            }
+        }
+        cout << ways % MOD << '\n';
+    }
+    return 0;
+}
+```
+### What the posted code is doing – high-level walk-through  
+
+The author rewrote the editorial idea in a very compact style.  
+Below is a line-by-line explanation of the important parts; comments in **bold** correspond to the numbered steps.
+
+***
+
+
+#### 1.  Input & basic data
+
+```cpp
+int n,m,v;                        // n = vertices, m = edges, v = V (upper bound)
+vector<int> num(n+1);             // vertex weights  (1-based; -1 = unknown)
+...
+vector<vector<pair<int,int>>> e;  // adjacency list, each edge = {to, id}
+```
+
+*He will store every undirected edge twice with ids `(2·idx)` and `(2·idx|1)` so he can
+identify the “reverse” edge via `id ^ 1`.*
+
+***
+
+#### 2.  Tarjan to extract **biconnected components** (BCCs)
+
+```cpp
+dfn[], low[]              // discovery & low times
+stack<int> st;            // stack of vertices
+vector<vector<int>> ans;  // list of BCCs (as vertex lists)
+
+tarjan(x , parentEdge):
+    dfn[x] = low[x] = ++cnt
+    push x on stack
+    for (x→y, edgeId):
+        skip the edge we just came from         if (edgeId == parentEdge ^ 1)
+        if y not visited:                       DFS
+            low[x] = min(low[x], low[y])
+        else                                    back-edge
+            low[x] = min(low[x], dfn[y])
+    if (dfn[x] == low[x])                       // x is root of a BCC
+        pop vertices from stack until x
+        store them as one BCC in ans
+```
+
+*Every `ans[k]` now contains all vertices that lie in one BCC;  
+components of size ≤ 2 are tree-like (no cycle).*
+
+***
+
+#### 3.  Helper `clr` – **bipartite test inside one BCC**
+
+```cpp
+vector<int> col(n+1);     // 0 = uncoloured, 1 / 2 = two colours
+vector<bool> in(n+1);     // marks vertices that belong to the current BCC
+
+bool clr(x , parentEdge , colour):
+    if vertex not in current BCC → OK
+    if already coloured          → return colour matches
+    colour this vertex
+    DFS to neighbours *within the BCC*
+```
+
+Returns `true` if the subgraph induced by the current BCC is bipartite.
+
+***
+
+#### 4.  Main loop over all BCCs
+
+```cpp
+flag  = true     // global validity
+ansx  = 1        // answer modulo MOD
+for each BCC bcc:
+    mark vertices of this BCC in[] = true
+
+    bool isBip = clr(bcc[0], 0, 0);     // bipartite?
+
+    collect known weights in vector nm  // vertices whose num[i] ≠ -1
+
+    ───────── logic exactly matching the editorial ─────────
+    if nm not empty:                     // some fixed weight inside BCC
+        all fixed values must be equal
+        otherwise  → impossible
+    if !isBip:                           // BCC has an odd cycle
+        it forces XOR = 0
+        so fixed value (if present) must be 0
+        if no fixed value               → value forced to 0 (only 1 way)
+    else  (is bipartite):
+        if nm empty                     → we may freely choose one value
+                                          → multiply answer by V
+```
+
+The variable names:
+
+* `flag`   – becomes false if any contradiction found  
+* `ansx`   – running product of possibilities, always mod 998244353
+
+After processing a BCC the `in[]` array is cleared again.
+
+***
+
+#### 5.  Output
+
+If any contradiction was met (`flag == false`), `ansx` has already been set to 0.  
+Finally the program prints `ansx`.
+
+***
+
+### In one sentence
+
+The code:
+
+1. Decomposes the graph into BCCs via Tarjan,  
+2. For every BCC  
+   -  checks whether its internal graph is bipartite,  
+   -  collects already-fixed vertex weights,  
+   -  applies the XOR-balance rules:
+     *odd cycle ⇒ component’s XOR must be 0;  
+     otherwise the whole component may take one free value*,  
+3. Multiplies by $$V$$ for every “free” component, else forces/validates 0,  
+4. Outputs the product mod 998244353 (or 0 if contradictions appear).
+
+That is exactly the standard optimal solution discussed in editorials.
+
+***
+
+Both programs run the same asymptotic time $$O(n+m)$$ and memory $$O(n+m)$$, so *speed-wise* they are equally “optimal” for the given limits.  
+The real difference is **correctness and robustness**:
+
+1. First code (the one with explicit DSU merging)  
+ -  Finds every biconnected component (BCC) with Tarjan.  
+ -  Unites *all* vertices that ever appear in the same cycle–BCC into a single DSU root, so constraints are propagated across overlapping cycles.  
+ -  Keeps one fixed value per root, detects all clashes, and handles the “odd-cycle ⇒ value 0” rule correctly.  
+ -  Produces the exact editorial solution.
+
+2. Second code (the shorter one you just pasted)  
+ -  Also extracts BCCs, but **never joins different BCCs that share a vertex**.  
+   A vertex that belongs to two cycles (common in real tests) will be treated in two independent passes, so XOR constraints can leak through this hole and the program may count invalid assignments.  
+ -  Therefore it is likely to WA on hidden tests where cycles overlap.
+
+### Verdict
+The **first program is the safer and conceptually complete solution**; the second one is faster to write but risks wrong answers in edge-cases.
+
+[1](https://www.eventhelix.com/embedded/optimizing-c-and-cpp-code/)
+[2](https://30dayscoding.com/blog/cpp-optimizations-writing-high-performance-code)
+[3](https://www.geeksforgeeks.org/c-tricks-competitive-programming-c-11/)
+[4](https://www.geeksforgeeks.org/cpp/speed-up-naive-algorithms-in-competitive-coding-in-c-cpp/)
+[5](https://frankalcantara.com/competitive-programming-insights-introduction/)
+[6](https://letsremotify.com/blog/optimization-techniques-in-c/)
+[7](https://cses.fi/book.pdf)
