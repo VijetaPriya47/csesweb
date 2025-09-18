@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function HeroSection() {
   const profileImageUrl = useBaseUrl('/img/vijeta-priya.jpg');
-  const resumeUrl = useBaseUrl('/resume.pdf');
+  const resumeUrl = useBaseUrl('');
   return (
     <section className="hero-section">
       <div className="hero-content">
