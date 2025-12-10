@@ -77,7 +77,8 @@ const config: Config = {
       title: 'Vijeta Priya',
       logo: {
         alt: 'Vijeta Priya Logo',
-        src: 'img/logo.svg',
+        src: 'img/avatar_logo.png',
+        style: { borderRadius: '50%' } // Optional: make it circular if it's an avatar
       },
       items: [
         { to: '/', label: 'Home', position: 'left' },

@@ -29,6 +29,22 @@ const ResumeSection = () => (
             </div>
             <div className={styles.item}>
                 <div className={styles.meta}>
+                    <span className={styles.date}>[Jun 2025 - Jul 2025]</span>
+                    <span className={styles.role}>Jubilant Ingrevia Limited (GET Intern)</span>
+                </div>
+                <div className={styles.content}>
+                    <ul className={styles.list}>
+                        <li>
+                            <strong>Process Optimization & Data Analysis:</strong> Enhanced distillation efficiency using Fenske-Underwood-Gilliland and McCabe-Thiele methods.
+                        </li>
+                        <li>
+                            <strong>Pattern Recognition:</strong> Analyzed performance data using <strong>Matplotlib</strong> and applied pattern recognition techniques to identify critical optimization factors.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className={styles.item}>
+                <div className={styles.meta}>
                     <span className={styles.date}>[2023 - 2024]</span>
                     <span className={styles.role}>Ask Senior (Mentor)</span>
                 </div>

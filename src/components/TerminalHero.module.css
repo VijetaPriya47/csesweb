@@ -1,8 +1,7 @@
-
 .terminalContainer {
   background-color: #0d1117;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   font-family: 'Fira Code', 'Roboto Mono', monospace;
   margin: 4rem auto;
   max-width: 800px;
