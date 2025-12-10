@@ -67,9 +67,22 @@
 }
 
 .list li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     color: var(--ifm-color-content-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
+
+.list li strong {
+    color: var(--ifm-color-emphasis-900);
+}
+
+.list li a {
+    color: var(--ifm-color-primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
 .grid {
     display: grid;

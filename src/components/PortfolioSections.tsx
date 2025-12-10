@@ -12,9 +12,18 @@ const ResumeSection = () => (
                 </div>
                 <div className={styles.content}>
                     <ul className={styles.list}>
-                        <li>PATCH: Fixed segmentation faults in authentication logic (Go).</li>
-                        <li>FEATURE: Developed artifact data sources for Terraform provider.</li>
-                        <li>BUGFIX: Patched state validation bugs in core services.</li>
+                        <li>
+                            <strong>Redesigned core authentication:</strong> Return explicit error types to resolve race condition crash. Refactored expiry date function. Prevented pipeline crashes for time_rotating resources.
+                            <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2722" target="_blank" rel="noreferrer"> [MR !2722]</a>
+                        </li>
+                        <li>
+                            <strong>Implemented gitlab_project_artifact data source:</strong> Enabled dynamic build artifact fetching in Terraform, bridging CI/CD and infrastructure.
+                            <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2721" target="_blank" rel="noreferrer"> [MR !2721]</a>
+                        </li>
+                        <li>
+                            <strong>Resolved schema inconsistency:</strong> Fixed import failures for legacy tokens without expiry dates in gitlab_project_access_token.
+                            <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2719" target="_blank" rel="noreferrer"> [MR !2719]</a>
+                        </li>
                     </ul>
                 </div>
             </div>
