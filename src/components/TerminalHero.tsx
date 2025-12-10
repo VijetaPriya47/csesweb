@@ -72,6 +72,7 @@ const TerminalHero = () => {
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
                         className={styles.input}
+                        placeholder="Type 'help' for commands..."
                         autoFocus
                     />
                 </div>
