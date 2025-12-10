@@ -1,0 +1,79 @@
+
+.terminalContainer {
+  background-color: #0d1117;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  font-family: 'Fira Code', 'Roboto Mono', monospace;
+  margin: 4rem auto;
+  max-width: 800px;
+  width: 90%;
+  overflow: hidden;
+  border: 1px solid #30363d;
+}
+
+.terminalHeader {
+  background-color: #161b22;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #30363d;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.title {
+  color: #8b949e;
+  font-size: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terminalBody {
+  padding: 20px;
+  height: 400px;
+  overflow-y: auto;
+  color: #c9d1d9;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  margin-bottom: 5px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.command {
+  color: #8b949e;
+}
+
+.output {
+  color: #3fb950;
+}
+
+.inputLine {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.prompt {
+  color: #58a6ff;
+  margin-right: 10px;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  color: #c9d1d9;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  outline: none;
+}

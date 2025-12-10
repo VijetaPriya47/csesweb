@@ -4,8 +4,15 @@
  * work well for content-centric websites.
  */
 
+/* Global Font Import - Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 /* You can override the default Infima variables here. */
 :root {
+  /* Override global font to Monospace */
+  --ifm-font-family-base: 'Fira Code', 'Roboto Mono', monospace;
+
+  /* Backend Engineer Color Palette overrides */
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -27,11 +34,31 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Ensure backgrounds are deep black/dark for brutalist vibe */
+  --ifm-background-color: #0d1117;
+  --ifm-navbar-background-color: #161b22;
+  --ifm-footer-background-color: #161b22;
+}
+
+/* Force everything to monospace if not inherited */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea {
+  font-family: 'Fira Code', 'Roboto Mono', monospace !important;
 }
 
 /* Reduce navbar padding */
 .navbar {
   padding: 0.5rem 1rem !important;
+  border-bottom: 1px solid #30363d;
 }
 
 .navbar__inner {
@@ -50,37 +77,8 @@
   padding: 0.25rem 0.5rem !important;
 }
 
-/* Style skip to main content link */
-div[role="region"][aria-label="Skip to main content"] {
-  position: relative;
-  display: block !important;
-  visibility: visible !important;
-  background: transparent;
-  color: #586069;
-  padding: 4px 8px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 400;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 8px;
-}
-
-div[role="region"][aria-label="Skip to main content"]:hover {
-  color: #0366d6;
-  text-decoration: underline;
-}
-
-div[role="region"][aria-label="Skip to main content"]:focus {
-  outline: 1px solid #0366d6;
-  outline-offset: 1px;
-}
-
-/* Dark mode support */
-[data-theme='dark'] div[role="region"][aria-label="Skip to main content"] {
-  color: #8b949e;
-}
-
-[data-theme='dark'] div[role="region"][aria-label="Skip to main content"]:hover {
-  color: #58a6ff;
+/* HIDE Skip to main content link completely */
+div[role="region"][aria-label="Skip to main content"],
+.skipToContent_fXgn {
+  display: none !important;
 }

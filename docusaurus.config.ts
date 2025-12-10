@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -80,15 +80,15 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/', label: 'Home', position: 'left'},
-        {to: '/projects', label: 'Projects', position: 'left'},
+        { to: '/', label: 'Home', position: 'left' },
+        { to: '/projects', label: 'Projects', position: 'left' },
         {
           type: 'docSidebar',
           sidebarId: 'csesSidebar',
           position: 'left',
           label: 'CSES Solutions',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/VijetaPriya47',
           label: 'GitHub',
@@ -96,62 +96,67 @@ const config: Config = {
         },
       ],
     },
-          footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Portfolio',
-            items: [
-              {
-                label: 'Home',
-                to: '/',
-              },
-              {
-                label: 'Projects',
-                to: '/projects',
-              },
-              {
-                label: 'CSES Solutions',
-                to: '/docs/cses/intro',
-              },
-            ],
-          },
-          {
-            title: 'Connect',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/VijetaPriya47',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://linkedin.com/in/vijeta-priya',
-              },
-              {
-                label: 'Codeforces',
-                href: 'https://codeforces.com/profile/vijetapriya',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'Resume',
-                href: '#',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Vijeta Priya. Built with Docusaurus.`,
-      },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Portfolio',
+          items: [
+            {
+              label: 'Home',
+              to: '/',
+            },
+            {
+              label: 'Projects',
+              to: '/projects',
+            },
+            {
+              label: 'CSES Solutions',
+              to: '/docs/cses/intro',
+            },
+          ],
+        },
+        {
+          title: 'Connect',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/VijetaPriya47',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://linkedin.com/in/vijeta-priya',
+            },
+            {
+              label: 'Codeforces',
+              href: 'https://codeforces.com/profile/vijetapriya',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'Resume',
+              href: '#',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Vijeta Priya. Built with Docusaurus.`,
+    },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
   } satisfies Preset.ThemeConfig,
 };

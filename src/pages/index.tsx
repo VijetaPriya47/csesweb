@@ -1,22 +1,16 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
-import HeroSection from '@site/src/components/Portfolio/HeroSection';
-import StatsSection from '@site/src/components/Portfolio/StatsSection';
-import FeaturedProjects from '@site/src/components/Portfolio/FeaturedProjects';
-import AchievementTimeline from '@site/src/components/Timeline/AchievementTimeline';
-import GitHubStats from '@site/src/components/Portfolio/GitHubStats';
+import TerminalHero from '@site/src/components/TerminalHero';
+import PortfolioSections from '@site/src/components/PortfolioSections';
 
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Vijeta Priya - Software Engineer & Competitive Programmer"
-      description="Portfolio of Vijeta Priya - Competitive Programming Specialist, Software Engineer, and CSES Solutions Contributor">
+      title="Vijeta Priya - Backend & Distributed Systems"
+      description="Portfolio of Vijeta Priya - Backend & Distributed Systems Engineer">
       <main>
-        <HeroSection />
-        <StatsSection />
-        <FeaturedProjects />
-        <AchievementTimeline />
-        <GitHubStats />
+        <TerminalHero />
+        <PortfolioSections />
       </main>
     </Layout>
   );
