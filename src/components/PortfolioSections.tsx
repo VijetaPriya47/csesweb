@@ -5,7 +5,10 @@ const ResumeSection = () => (
     <div className={styles.section}>
         <h2 className={styles.heading}>:: SYSTEM_LOGS / EXPERIENCE</h2>
         <div className={styles.timeline}>
-            <div className={styles.item}>
+            <div className={styles.experienceItem}>
+                <div className={styles.logoContainer}>
+                    <img src="/csesweb/img/gitlab.png" alt="GitLab" className={styles.timelineLogo} />
+                </div>
                 <div className={styles.meta}>
                     <span className={styles.date}>[2024 - Present]</span>
                     <span className={styles.role}>GitLab (Open Source Contributor)</span>
@@ -27,7 +30,10 @@ const ResumeSection = () => (
                     </ul>
                 </div>
             </div>
-            <div className={styles.item}>
+            <div className={styles.experienceItem}>
+                <div className={styles.logoContainer}>
+                    <img src="/csesweb/img/jubilant.jpeg" alt="Jubilant Ingrevia" className={styles.timelineLogo} />
+                </div>
                 <div className={styles.meta}>
                     <span className={styles.date}>[Jun 2025 - Jul 2025]</span>
                     <span className={styles.role}>Jubilant Ingrevia Limited (GET Intern)</span>
@@ -43,7 +49,10 @@ const ResumeSection = () => (
                     </ul>
                 </div>
             </div>
-            <div className={styles.item}>
+            <div className={styles.experienceItem}>
+                <div className={styles.logoContainer}>
+                    <img src="/csesweb/img/asksenior.jpeg" alt="Ask Senior" className={styles.timelineLogo} />
+                </div>
                 <div className={styles.meta}>
                     <span className={styles.date}>[2023 - 2024]</span>
                     <span className={styles.role}>Ask Senior (Mentor)</span>
@@ -77,14 +86,6 @@ const ProjectsSection = () => (
                 <p className={styles.description}>
                     High-performance trading engine achieving 2ms latency for 10k events.
                     Utilized lock-free data structures and shared memory IPC for maximum throughput.
-                </p>
-            </div>
-            <div className={styles.card}>
-                <h3 className={styles.cardTitle}>Competitive Programming</h3>
-                <div className={styles.techStack}>[Algorithms] [C++]</div>
-                <img src="/csesweb/img/codeforces.png" alt="Codeforces Achievement" className={styles.cardImage} />
-                <p className={styles.description}>
-                    Grandmaster on Codeforces (Max Rating: 2400+). Solved over 2000 problems. Selected for ACM-ICPC Regionals.
                 </p>
             </div>
         </div>

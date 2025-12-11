@@ -27,21 +27,42 @@
     margin-left: 10px;
 }
 
-.item {
+.experienceItem {
     margin-bottom: 40px;
     position: relative;
+    padding-left: 20px;
+    /* Space for the logo */
 }
 
-.item::before {
-    content: '';
+/* Ensure no pseudo-element */
+.experienceItem::before {
+    content: none !important;
+    display: none !important;
+}
+
+.logoContainer {
     position: absolute;
-    left: -27px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background: #238636;
+    left: -55px;
+    /* Adjust based on logo size */
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: #0d1117;
     border-radius: 50%;
-    border: 4px solid #0d1117;
+    /* Circular */
+    border: 2px solid #30363d;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.timelineLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* or contain, depending on the logo */
 }
 
 .meta {

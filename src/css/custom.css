@@ -34,6 +34,8 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-warning-contrast-background: #ebdac1;
+  --ifm-color-warning-contrast-foreground: #4c3200;
 
   /* Ensure backgrounds are deep black/dark for brutalist vibe */
   --ifm-background-color: #0d1117;
@@ -77,7 +79,32 @@ textarea {
   padding: 0.25rem 0.5rem !important;
 }
 
-/* HIDE Skip to main content link completely */
+.navbar__link {
+  padding: 0.25rem 0.5rem !important;
+}
+
+/* Navbar Logo Refinement */
+.navbar__logo {
+  margin-right: 10px;
+}
+
+.navbar__logo img {
+  height: 44px;
+  /* Default is often small, bumping to 44px */
+  width: 44px;
+  object-fit: cover;
+  /* Ensure image doesn't stretch if not square */
+  border-radius: 50%;
+  border: 2px solid var(--ifm-color-primary);
+  /* Add primary border for polish */
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar__logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--ifm-color-primary);
+}
+
 div[role="region"][aria-label="Skip to main content"],
 .skipToContent_fXgn {
   display: none !important;

@@ -78,7 +78,7 @@ const config: Config = {
       logo: {
         alt: 'Vijeta Priya Logo',
         src: 'img/avatar_logo.png',
-        style: { borderRadius: '50%' } // Optional: make it circular if it's an avatar
+        // style: { borderRadius: '50%' } // Moved to custom.css for better control
       },
       items: [
         { to: '/', label: 'Home', position: 'left' },
@@ -126,7 +126,7 @@ const config: Config = {
             },
             {
               label: 'LinkedIn',
-              href: 'https://linkedin.com/in/vijeta-priya',
+              href: 'https://linkedin.com/in/vzsaz',
             },
             {
               label: 'Codeforces',
