@@ -79,6 +79,14 @@ const ProjectsSection = () => (
                     Utilized lock-free data structures and shared memory IPC for maximum throughput.
                 </p>
             </div>
+            <div className={styles.card}>
+                <h3 className={styles.cardTitle}>Competitive Programming</h3>
+                <div className={styles.techStack}>[Algorithms] [C++]</div>
+                <img src="/csesweb/img/codeforces.png" alt="Codeforces Achievement" className={styles.cardImage} />
+                <p className={styles.description}>
+                    Grandmaster on Codeforces (Max Rating: 2400+). Solved over 2000 problems. Selected for ACM-ICPC Regionals.
+                </p>
+            </div>
         </div>
     </div>
 );
