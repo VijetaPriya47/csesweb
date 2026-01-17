@@ -141,11 +141,93 @@
     font-size: 0.95rem;
 }
 
-.cardImage {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
+
+/* Contributions Section */
+.contributionsSection {
+    margin-bottom: 80px;
+}
+
+.scrollWindow {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
     border: 1px solid #30363d;
+    background: #0d1117;
+    border-radius: 6px;
+}
+
+/* Gradient overlays for fade effect at top/bottom */
+.scrollWindow::after,
+.scrollWindow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.scrollWindow::before {
+    top: 0;
+    background: linear-gradient(to bottom, #0d1117, transparent);
+}
+
+.scrollWindow::after {
+    bottom: 0;
+    background: linear-gradient(to top, #0d1117, transparent);
+}
+
+.scrollContent {
+    animation: scroll-vertical 20s linear infinite;
+}
+
+/* Pause animation on hover */
+.scrollWindow:hover .scrollContent {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.contributionItem {
+    display: block;
+    padding: 15px 20px;
+    color: var(--ifm-color-content-secondary);
+    text-decoration: none !important;
+    border-bottom: 1px solid #30363d;
+    transition: background-color 0.2s, padding-left 0.2s;
+    font-size: 0.95rem;
+}
+
+.contributionItem:hover {
+    background-color: rgba(46, 133, 85, 0.1);
+    color: var(--ifm-color-primary);
+    padding-left: 25px;
+}
+
+.projectName {
+    color: var(--ifm-color-emphasis-900);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+[data-theme='light'] .scrollWindow {
+    background: #ffffff;
+    border-color: #e1e4e8;
+}
+
+[data-theme='light'] .scrollWindow::before {
+    background: linear-gradient(to bottom, #ffffff, transparent);
+}
+
+[data-theme='light'] .scrollWindow::after {
+    background: linear-gradient(to top, #ffffff, transparent);
 }

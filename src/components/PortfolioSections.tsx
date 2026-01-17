@@ -92,9 +92,62 @@ const ProjectsSection = () => (
     </div>
 );
 
+const contributions = [
+    {
+        project: "Hyperledger Fablo",
+        desc: "Fixed a bug where the network generation script would fail if the optional post-generate.sh hook was missing.",
+        link: "https://github.com/hyperledger-labs/fablo/pull/521"
+    },
+    {
+        project: "Hyperledger Fablo",
+        desc: "Co-Commited with others",
+        link: "https://github.com/hyperledger-labs/fablo/pull/594"
+    },
+    {
+        project: "Volcano (CNCF)",
+        desc: "Contributed improvements to the official Volcano documentation site.",
+        link: "https://github.com/volcano-sh/website/pull/377"
+    },
+    {
+        project: "Kubernetes",
+        desc: "Contributed code fixes/improvements to the core Kubernetes repository.",
+        link: "https://github.com/kubernetes/kubernetes/pull/135217"
+    },
+    {
+        project: "Kubernetes",
+        desc: "CAPD: Remove finalizers during deletion if ownerRef was never set for cluster controllers",
+        link: "https://github.com/kubernetes-sigs/cluster-api/pull/13239"
+    }
+];
+
+const ContributionsSection = () => (
+    <div className={styles.contributionsSection}>
+        <h2 className={styles.heading}>:: GIT_REPOS / GIT_LOGS</h2>
+        <div className={styles.scrollWindow}>
+            <div className={styles.scrollContent}>
+                {/* Original List */}
+                {contributions.map((item, index) => (
+                    <a key={`orig-${index}`} href={item.link} target="_blank" rel="noreferrer" className={styles.contributionItem}>
+                        <span className={styles.projectName}>{item.project}</span>
+                        - {item.desc}
+                    </a>
+                ))}
+                {/* Duplicate List for Seamless Scroll */}
+                {contributions.map((item, index) => (
+                    <a key={`dup-${index}`} href={item.link} target="_blank" rel="noreferrer" className={styles.contributionItem}>
+                        <span className={styles.projectName}>{item.project}</span>
+                        - {item.desc}
+                    </a>
+                ))}
+            </div>
+        </div>
+    </div>
+);
+
 const PortfolioSections = () => (
     <div className={styles.container}>
         <ResumeSection />
+        <ContributionsSection />
         <ProjectsSection />
     </div>
 );

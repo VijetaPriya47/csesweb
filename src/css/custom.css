@@ -150,7 +150,33 @@ div[role="region"][aria-label="Skip to main content"],
 }
 
 .navbar-sidebar .menu__list-item a:hover,
-.navbar-sidebar .menu__list-item a--active {
-  color: var(--ifm-color-primary) !important;
-  background: rgba(46, 133, 85, 0.1);
+
+/* Read Blog Button on Homepage */
+.read-blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  /* Space between terminal and experience */
+  width: 100%;
+}
+
+.read-blog-btn {
+  background-color: var(--ifm-color-primary);
+  color: white !important;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid var(--ifm-color-primary-dark);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.read-blog-btn:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
