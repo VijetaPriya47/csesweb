@@ -132,6 +132,10 @@ const config: Config = {
               label: 'Codeforces',
               href: 'https://codeforces.com/profile/vijetapriya',
             },
+            {
+              label: 'Medium',
+              href: 'https://medium.com/@vijeta004',
+            },
           ],
         },
         {

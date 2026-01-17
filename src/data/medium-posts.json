@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Why not just use REST for everything?",
+    "link": "https://medium.com/@vijeta004/why-not-just-use-rest-for-everything-9d053319e552?source=rss-f07908d154a3------2",
+    "pubDate": "Wed, 14 Jan 2026 14:34:13 GMT",
+    "image": "https://cdn-images-1.medium.com/max/911/1*EjEUWgJPvEN2R-XBgeV3oQ.png",
+    "description": "“Why not just use REST for everything?”",
+    "categories": [
+      "system-design-concepts",
+      "distributed-systems",
+      "system-design-interview",
+      "rest",
+      "grpc"
+    ]
+  },
+  {
+    "title": "Dagger: Goodbye YAML, Hello Developer-Friendly CI/CD",
+    "link": "https://medium.com/@vijeta004/for-years-yaml-has-been-the-default-language-of-ci-cd-pipelines-a92015df16fb?source=rss-f07908d154a3------2",
+    "pubDate": "Wed, 20 Aug 2025 19:53:06 GMT",
+    "image": "https://cdn-images-1.medium.com/max/1024/0*L1Lje_1T9sEh9DaN",
+    "description": "For years, YAML has been the default language of CI/CD pipelines. GitHub Actions, GitLab CI, Jenkins, CircleCI — all of them rely on large, sprawling ...",
+    "categories": []
+  },
+  {
+    "title": "Automating Documentation Sync Between GitHub Repos Using GitHub Actions",
+    "link": "https://medium.com/@vijeta004/automating-documentation-sync-between-github-repos-using-github-actions-9d1bbd249c4e?source=rss-f07908d154a3------2",
+    "pubDate": "Mon, 18 Aug 2025 03:50:02 GMT",
+    "image": "https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=9d1bbd249c4e",
+    "description": "If you’ve ever managed multiple GitHub repositories, you’ve probably faced this problem:",
+    "categories": [
+      "github",
+      "github-actions",
+      "tutorial",
+      "guides-and-tutorials",
+      "markdown"
+    ]
+  }
+]

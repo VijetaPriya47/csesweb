@@ -1,0 +1,39 @@
+name: Sync Medium Articles
+
+on:
+  schedule:
+    - cron: '30 2 * * *' # 8:00 AM IST (2:30 AM UTC)
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync-medium:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run sync script
+        run: node scripts/sync-medium.mjs
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code src/data/medium-posts.json || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/data/medium-posts.json
+          git commit -m "chore: sync medium articles [skip ci]"
+          git push

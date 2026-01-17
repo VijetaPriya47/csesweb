@@ -11,11 +11,8 @@ date: 2025-12-10
 
 I write detailed articles on distributed systems, low-latency trading, and more on Medium.
 
-### [Read my stories on Medium](https://medium.com/@vijeta004)
+import MediumCards from '@site/src/components/MediumCards';
 
-Some of my recent work:
-- **Distributed Systems Patterns**
-- **Low Latency C++ Optimizations**
-- **System Design Deep Dives**
+<MediumCards />
 
 <!-- truncate -->
