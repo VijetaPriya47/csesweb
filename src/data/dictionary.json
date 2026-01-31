@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "word": "Git",
+        "definition": "A distributed version control system.",
+        "groups": [
+            "DevOps",
+            "Tools"
+        ],
+        "createdAt": 1700000000000
+    },
+    {
+        "id": "2",
+        "word": "React",
+        "definition": "A JavaScript library for building user interfaces.",
+        "groups": [
+            "Frontend",
+            "Library"
+        ],
+        "createdAt": 1700000000001
+    },
+    {
+        "id": "3",
+        "word": "Docusaurus",
+        "definition": "A static site generator built on React.",
+        "groups": [
+            "Frontend",
+            "Tools"
+        ],
+        "createdAt": 1700000000002
+    }
+]

@@ -64,7 +64,7 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: ['./src/css/custom.css', './src/css/portfolio.css', './src/css/cses-docs.css', './src/css/animations.css'],
+          customCss: ['./src/css/custom.css', './src/css/portfolio.css', './src/css/cses-docs.css', './src/css/animations.css', './src/css/dictionary.css', './src/css/flip-card.css'],
         },
       } satisfies Preset.Options,
     ],
@@ -83,6 +83,7 @@ const config: Config = {
       items: [
         { to: '/', label: 'Home', position: 'left' },
         { to: '/projects', label: 'Projects', position: 'left' },
+        { to: '/dictionary', label: 'Dictionary', position: 'left' },
         {
           type: 'docSidebar',
           sidebarId: 'csesSidebar',
@@ -110,6 +111,10 @@ const config: Config = {
             {
               label: 'Projects',
               to: '/projects',
+            },
+            {
+              label: 'Dictionary',
+              to: '/dictionary',
             },
             {
               label: 'CSES Solutions',
