@@ -17,6 +17,13 @@ const ProjectsPage = () => {
             <div className={styles.grid}>
               {/* Flip Cards for Main Projects */}
               <ProjectFlipCard
+                title="GitLab Open Source"
+                techStack="[Go] [Terraform] [CI/CD]"
+                description="Core contributions to GitLab's Terraform Provider: Auth redesign, new data sources, and bug fixes."
+                link="/projects/gitlab"
+              />
+
+              <ProjectFlipCard
                 title="Ride-Sharing Microservices"
                 techStack="[gRPC] [K8s] [MongoDB] [Stripe] [OpenTelemetry]"
                 description="Distributed backend system ensuring 'at-least-once delivery' and 'idempotent consumers'."

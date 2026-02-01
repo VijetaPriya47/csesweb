@@ -1,5 +1,12 @@
 [
     {
+        "word": "Distributed Systems",
+        "definition": "a Distributed System is a collection of independent computers that appears to its users as a single coherent system. Instead of sharing memory or a clock, these computers communicate by passing messages over a network to achieve a common goal.",
+        "groups": [],
+        "id": "d9ce4ed6-0ce0-40c6-9047-f0917294781e",
+        "createdAt": 1769932805109
+    },
+    {
         "id": "1",
         "word": "Git",
         "definition": "A distributed version control system.",
