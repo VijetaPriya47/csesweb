@@ -56,6 +56,7 @@ async function syncMediumPosts() {
         console.log(`Found ${posts.length} posts.`);
         fs.writeFileSync(OUTPUT_FILE, JSON.stringify(posts, null, 2));
         console.log(`Saved posts to ${OUTPUT_FILE}`);
+        process.exit(0);
 
     } catch (error) {
         console.error('Error fetching Medium posts:', error);
