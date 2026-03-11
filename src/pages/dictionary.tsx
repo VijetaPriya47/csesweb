@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import { DictionaryManager } from '../components/Dictionary/DictionaryManager';
 
-export default function DictionaryPage(): JSX.Element {
+export default function DictionaryPage() {
     return (
         <Layout
             title="Dictionary"

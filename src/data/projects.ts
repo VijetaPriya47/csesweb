@@ -90,7 +90,7 @@ export const projects: Project[] = [
 export const techStacks = [
   'C++',
   'Python',
-  'Golang'
+  'Golang',
   'Algorithms',
   'Data Structures',
   'Competitive Programming',
