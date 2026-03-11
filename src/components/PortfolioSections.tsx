@@ -1,72 +1,111 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './PortfolioSections.module.css';
 
-const ResumeSection = () => (
-    <div className={styles.section}>
-        <h2 className={styles.heading}>:: SYSTEM_LOGS / EXPERIENCE</h2>
-        <div className={styles.timeline}>
-            <div className={styles.experienceItem}>
-                <div className={styles.logoContainer}>
-                    <img src="/csesweb/img/gitlab.png" alt="GitLab" className={styles.timelineLogo} />
+const ResumeSection = () => {
+    const gitlabLogoUrl = useBaseUrl('/img/projects/gitlab-logo.png');
+    const jubilantLogoUrl = useBaseUrl('/img/jubilant.jpeg');
+    const askSeniorLogoUrl = useBaseUrl('/img/asksenior.jpeg');
+
+    return (
+        <div className={styles.section}>
+            <h2 className={styles.heading}>:: SYSTEM_LOGS / EXPERIENCE</h2>
+            <div className={styles.timeline}>
+                <div className={styles.experienceItem}>
+                    <div className={styles.logoContainer}>
+                        <img src={gitlabLogoUrl} alt="GitLab" className={styles.timelineLogo} />
+                    </div>
+                    <div className={styles.meta}>
+                        <span className={styles.date}>[2024 - Present]</span>
+                        <span className={styles.role}>GitLab (Open Source Contributor)</span>
+                    </div>
+                    <div className={styles.content}>
+                        <ul className={styles.list}>
+                            <li>
+                                <strong>Redesigned core authentication:</strong> Return explicit error types to resolve race condition crash. Refactored expiry date function. Prevented pipeline crashes for time_rotating resources.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2722" target="_blank" rel="noreferrer"> [MR !2722]</a>
+                            </li>
+                            <li>
+                                <strong>Implemented gitlab_project_artifact data source:</strong> Enabled dynamic build artifact fetching in Terraform, bridging CI/CD and infrastructure.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2721" target="_blank" rel="noreferrer"> [MR !2721]</a>
+                            </li>
+                            <li>
+                                <strong>Resolved schema inconsistency:</strong> Fixed import failures for legacy tokens without expiry dates in gitlab_project_access_token.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2719" target="_blank" rel="noreferrer"> [MR !2719]</a>
+                            </li>
+                            <li>
+                                <strong>Add priority field support:</strong> Enabled priority field for project and group labels to improve categorization.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2898" target="_blank" rel="noreferrer"> [MR !2898]</a>
+                            </li>
+                            <li>
+                                <strong>Project Security Settings:</strong> Implemented <code>gitlab_project_security_settings</code> resource for automated security management.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2897" target="_blank" rel="noreferrer"> [MR !2897]</a>
+                            </li>
+                            <li>
+                                <strong>Wiki Subpage Drift Fix:</strong> Resolved title drift issues for wiki subpages and handled special characters in slugs.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2896" target="_blank" rel="noreferrer"> [MR !2896]</a>
+                            </li>
+                            <li>
+                                <strong>Centralized Token Rotation:</strong> Refactored token handling by centralizing rotation logic into a shared interface.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2894" target="_blank" rel="noreferrer"> [MR !2894]</a>
+                            </li>
+                            <li>
+                                <strong>Compliance Requirements:</strong> Added <code>gitlab_compliance_requirement</code> resource to enhance enterprise compliance workflows.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2804" target="_blank" rel="noreferrer"> [MR !2804]</a>
+                            </li>
+                            <li>
+                                <strong>Group Service Account Tokens:</strong> Implemented data source for group service account access tokens.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2805" target="_blank" rel="noreferrer"> [MR !2805]</a>
+                            </li>
+                            <li>
+                                <strong>Package Dependency Proxy:</strong> Added support for managing project package dependency proxy settings.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2802" target="_blank" rel="noreferrer"> [MR !2802]</a>
+                            </li>
+                            <li>
+                                <strong>GitPod References:</strong> Updated internal project references from GitPod to Ona for better workspace consistency.
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2806" target="_blank" rel="noreferrer"> [MR !2806]</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div className={styles.meta}>
-                    <span className={styles.date}>[2024 - Present]</span>
-                    <span className={styles.role}>GitLab (Open Source Contributor)</span>
+                <div className={styles.experienceItem}>
+                    <div className={styles.logoContainer}>
+                        <img src={jubilantLogoUrl} alt="Jubilant Ingrevia" className={styles.timelineLogo} />
+                    </div>
+                    <div className={styles.meta}>
+                        <span className={styles.date}>[Jun 2025 - Jul 2025]</span>
+                        <span className={styles.role}>Jubilant Ingrevia Limited (GET Intern)</span>
+                    </div>
+                    <div className={styles.content}>
+                        <ul className={styles.list}>
+                            <li>
+                                <strong>Process Optimization & Data Analysis:</strong> Enhanced distillation efficiency using Fenske-Underwood-Gilliland and McCabe-Thiele methods.
+                            </li>
+                            <li>
+                                <strong>Pattern Recognition:</strong> Analyzed performance data using <strong>Matplotlib</strong> and applied pattern recognition techniques to identify critical optimization factors.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div className={styles.content}>
-                    <ul className={styles.list}>
-                        <li>
-                            <strong>Redesigned core authentication:</strong> Return explicit error types to resolve race condition crash. Refactored expiry date function. Prevented pipeline crashes for time_rotating resources.
-                            <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2722" target="_blank" rel="noreferrer"> [MR !2722]</a>
-                        </li>
-                        <li>
-                            <strong>Implemented gitlab_project_artifact data source:</strong> Enabled dynamic build artifact fetching in Terraform, bridging CI/CD and infrastructure.
-                            <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2721" target="_blank" rel="noreferrer"> [MR !2721]</a>
-                        </li>
-                        <li>
-                            <strong>Resolved schema inconsistency:</strong> Fixed import failures for legacy tokens without expiry dates in gitlab_project_access_token.
-                            <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2719" target="_blank" rel="noreferrer"> [MR !2719]</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div className={styles.experienceItem}>
-                <div className={styles.logoContainer}>
-                    <img src="/csesweb/img/jubilant.jpeg" alt="Jubilant Ingrevia" className={styles.timelineLogo} />
-                </div>
-                <div className={styles.meta}>
-                    <span className={styles.date}>[Jun 2025 - Jul 2025]</span>
-                    <span className={styles.role}>Jubilant Ingrevia Limited (GET Intern)</span>
-                </div>
-                <div className={styles.content}>
-                    <ul className={styles.list}>
-                        <li>
-                            <strong>Process Optimization & Data Analysis:</strong> Enhanced distillation efficiency using Fenske-Underwood-Gilliland and McCabe-Thiele methods.
-                        </li>
-                        <li>
-                            <strong>Pattern Recognition:</strong> Analyzed performance data using <strong>Matplotlib</strong> and applied pattern recognition techniques to identify critical optimization factors.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div className={styles.experienceItem}>
-                <div className={styles.logoContainer}>
-                    <img src="/csesweb/img/asksenior.jpeg" alt="Ask Senior" className={styles.timelineLogo} />
-                </div>
-                <div className={styles.meta}>
-                    <span className={styles.date}>[2023 - 2024]</span>
-                    <span className={styles.role}>Ask Senior (Mentor)</span>
-                </div>
-                <div className={styles.content}>
-                    <ul className={styles.list}>
-                        <li>OUTPUT: Created 50+ video editorials on Bit Manipulation/Interactive problems.</li>
-                        <li>IMPACT: Mentored junior developers in competitive programming concepts.</li>
-                    </ul>
+                <div className={styles.experienceItem}>
+                    <div className={styles.logoContainer}>
+                        <img src={askSeniorLogoUrl} alt="Ask Senior" className={styles.timelineLogo} />
+                    </div>
+                    <div className={styles.meta}>
+                        <span className={styles.date}>[2023 - 2024]</span>
+                        <span className={styles.role}>Ask Senior (Mentor)</span>
+                    </div>
+                    <div className={styles.content}>
+                        <ul className={styles.list}>
+                            <li>OUTPUT: Created 50+ video editorials on Bit Manipulation/Interactive problems.</li>
+                            <li>IMPACT: Mentored junior developers in competitive programming concepts.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
 
 const ProjectsSection = () => (
     <div className={styles.section}>
@@ -114,9 +153,24 @@ const contributions = [
         link: "https://github.com/kubernetes/kubernetes/pull/135217"
     },
     {
-        project: "Kubernetes",
+        project: "Kubernetes SIGs",
         desc: "CAPD: Remove finalizers during deletion if ownerRef was never set for cluster controllers",
         link: "https://github.com/kubernetes-sigs/cluster-api/pull/13239"
+    },
+    {
+        project: "GitLab Terraform",
+        desc: "Add priority field support to project and group labels",
+        link: "https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2898"
+    },
+    {
+        project: "GitLab Terraform",
+        desc: "feat: add gitlab_project_security_settings resource",
+        link: "https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2897"
+    },
+    {
+        project: "GitLab Terraform",
+        desc: "fix(resource/wiki_page): fix title drift for subpages and dashes",
+        link: "https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2896"
     }
 ];
 
@@ -125,7 +179,6 @@ const ContributionsSection = () => (
         <h2 className={styles.heading}>:: GIT_REPOS / GIT_LOGS</h2>
 
         <div className={styles.spotifyCard}>
-            {/* Spotify-like Header */}
             <div className={styles.spotifyHeader}>
                 <div className={styles.spotifyCover}>
                     <img src="https://github.com/VijetaPriya47.png" alt="Cover" />
@@ -136,12 +189,11 @@ const ContributionsSection = () => (
                     <div className={styles.spotifyMeta}>
                         <img src="https://github.com/VijetaPriya47.png" alt="User" className={styles.spotifyAvatar} />
                         <span className={styles.spotifyUsername}>Vijeta Priya</span>
-                        <span className={styles.spotifyStats}>• 5 commits • 2024-2025</span>
+                        <span className={styles.spotifyStats}>• 10+ commits • 2024-2025</span>
                     </div>
                 </div>
             </div>
 
-            {/* Controls */}
             <div className={styles.spotifyControls}>
                 <button className={styles.playButton} title="Play/Pause Scroll">
                     <svg role="img" height="24" width="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path></svg>
@@ -155,7 +207,6 @@ const ContributionsSection = () => (
 
             <div className={styles.scrollWindow}>
                 <div className={styles.scrollContent}>
-                    {/* Original List */}
                     {contributions.map((item, index) => (
                         <a key={`orig-${index}`} href={item.link} target="_blank" rel="noreferrer" className={styles.contributionItem}>
                             <span className={styles.trackIndex}>{index + 1}</span>
@@ -166,7 +217,6 @@ const ContributionsSection = () => (
                             <span className={styles.trackTime}>Merged</span>
                         </a>
                     ))}
-                    {/* Duplicate List for Seamless Scroll */}
                     {contributions.map((item, index) => (
                         <a key={`dup-${index}`} href={item.link} target="_blank" rel="noreferrer" className={styles.contributionItem}>
                             <span className={styles.trackIndex}>{contributions.length + index + 1}</span>

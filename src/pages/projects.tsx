@@ -21,13 +21,15 @@ const ProjectsPage = () => {
                 techStack="[Go] [Terraform] [CI/CD]"
                 description="Core contributions to GitLab's Terraform Provider: Auth redesign, new data sources, and bug fixes."
                 link="/projects/gitlab"
+                image="/img/projects/gitlab-logo.png"
               />
 
               <ProjectFlipCard
-                title="Ride-Sharing Microservices"
+                title="Hybrid Logistics Engine"
                 techStack="[gRPC] [K8s] [MongoDB] [Stripe] [OpenTelemetry]"
-                description="Distributed backend system ensuring 'at-least-once delivery' and 'idempotent consumers'."
+                description="Technical architecture and system design documentation for a highly scalable Hybrid Logistics Engine."
                 link="/projects/ride-sharing"
+                image="/img/projects/hybrid-logistics.png"
               />
 
               <ProjectFlipCard

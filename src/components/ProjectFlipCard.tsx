@@ -1,20 +1,23 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-// We can import the CSS globally in config or use module.css. 
-// For simplicity given the setup, I'll rely on the global CSS file I just created.
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 interface ProjectFlipCardProps {
     title: string;
     techStack: string;
     description: string;
     link: string;
+    image?: string;
 }
 
-export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ title, techStack, description, link }) => {
+export const ProjectFlipCard: React.FC<ProjectFlipCardProps> = ({ title, techStack, description, link, image }) => {
+    const imageUrl = useBaseUrl(image);
+
     return (
         <div className="flip-card">
             <div className="flip-card-inner">
                 <div className="flip-card-front">
+                    {image && <img src={imageUrl} alt={title} className="flip-card-image" />}
                     <h3 className="flip-card-title">{title}</h3>
                     <div className="flip-card-tech">{techStack}</div>
                 </div>

@@ -1,10 +1,31 @@
 [
   {
-    "title": "Why not just use REST for everything?",
+    "title": "Blinkit Interview: SDE Intern",
+    "link": "https://medium.com/@vijeta004/how-i-bombed-my-blinkit-interview-and-now-i-want-to-own-my-startups-51d00cd647f0?source=rss-f07908d154a3------2",
+    "pubDate": "Mon, 02 Mar 2026 08:17:23 GMT",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*C_Z--HSu2llxTmXm6pvewg.jpeg",
+    "description": "So, picture this: it’s mid-January. I decided to fill out a Google Form for a Data Analyst position at Blinkit. The catch? I applied with my hardcore ...",
+    "categories": []
+  },
+  {
+    "title": "I was just gonna unistall Pop 0S — My system and I just got a Heart Attack",
+    "link": "https://medium.com/@vijeta004/how-a-simple-media-player-ddosd-my-cpu-pop-os-900dfe8bb8f1?source=rss-f07908d154a3------2",
+    "pubDate": "Sun, 01 Mar 2026 06:43:20 GMT",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*uW0lcP4QoT4C90jBLhm-XQ.jpeg",
+    "description": "I was just about to unistall POP OS and switch to Ubuntu. I am a regular user of Kali, Ubuntu, Pop OS and Windows too, for different different purpose...",
+    "categories": [
+      "bash",
+      "operating-systems",
+      "performance",
+      "popos"
+    ]
+  },
+  {
+    "title": "REST vs. gRPC: When to Choose Efficiency over Simplicity.",
     "link": "https://medium.com/@vijeta004/why-not-just-use-rest-for-everything-9d053319e552?source=rss-f07908d154a3------2",
     "pubDate": "Wed, 14 Jan 2026 14:34:13 GMT",
     "image": "https://cdn-images-1.medium.com/max/911/1*EjEUWgJPvEN2R-XBgeV3oQ.png",
-    "description": "“Why not just use REST for everything?”",
+    "description": "So I was learning GO. And as I was working on a microservices in my intial years of Development. I read abou gRPC, GraphQL, SOAP.",
     "categories": [
       "system-design-concepts",
       "distributed-systems",
@@ -25,7 +46,7 @@
     "title": "Automating Documentation Sync Between GitHub Repos Using GitHub Actions",
     "link": "https://medium.com/@vijeta004/automating-documentation-sync-between-github-repos-using-github-actions-9d1bbd249c4e?source=rss-f07908d154a3------2",
     "pubDate": "Mon, 18 Aug 2025 03:50:02 GMT",
-    "image": "https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=9d1bbd249c4e",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*ieAUexsDA4ilJHonScLxJQ.jpeg",
     "description": "If you’ve ever managed multiple GitHub repositories, you’ve probably faced this problem:",
     "categories": [
       "github",

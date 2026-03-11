@@ -19,33 +19,25 @@ export default function GitlabPage(): ReactNode {
                             to improve infrastructure-as-code reliability for thousands of users.
                         </p>
 
-                        <h3>Key Contributions</h3>
+                        <h3>Key Contributions & Activity</h3>
 
-                        <h4>1. Core Authentication Redesign</h4>
-                        <p>
-                            Addressed a race condition crash in the authentication flow by ensuring explicit error types were returned.
-                            Refactored the expiry date logic to prevent pipeline crashes for time-rotating resources.
-                        </p>
+                        <h4>Open Contributions (Active)</h4>
                         <ul>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2722" target="_blank">View MR !2722: Redesigned core auth & expiry logic</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2898" target="_blank">!2898: feat: Add priority field support to project and group labels</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2897" target="_blank">!2897: feat: add gitlab_project_security_settings resource</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2896" target="_blank">!2896: fix(resource/wiki_page): fix title drift for subpages and dashes</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2894" target="_blank">!2894: Refactor: centralize token rotation logic into shared interface</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2804" target="_blank">!2804: feat: add gitlab_compliance_requirement resource</a></li>
                         </ul>
 
-                        <h4>2. New Data Source: <code>gitlab_project_artifact</code></h4>
-                        <p>
-                            Implemented a new data source to enable dynamic fetching of build artifacts within Terraform.
-                            This bridged a gap between CI/CD pipelines and infrastructure provisioning.
-                        </p>
+                        <h4>Recent Merged MRs</h4>
                         <ul>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2721" target="_blank">View MR !2721: Implemented artifacts data source</a></li>
-                        </ul>
-
-                        <h4>3. Schema Consistency Fixes</h4>
-                        <p>
-                            Fixed import failures for legacy tokens that lacked expiry dates, ensuring backward compatibility
-                            and smooth upgrades for existing resources.
-                        </p>
-                        <ul>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2719" target="_blank">View MR !2719: Resolved legacy token schema issues</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2806" target="_blank">!2806: fix: changed GitPod References to Ona</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2805" target="_blank">!2805: feat: add gitlab_group_service_account_access_tokens data source</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2802" target="_blank">!2802: Add gitlab_project_package_dependency_proxy resource</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2722" target="_blank">!2722: Redesigned core auth & expiry logic</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2721" target="_blank">!2721: Implemented gitlab_artifact_file data source</a></li>
+                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2719" target="_blank">!2719: Allow gitlab_project_label name updates without replacement</a></li>
                         </ul>
 
                         <h3>Tech Stack</h3>
@@ -65,9 +57,12 @@ export default function GitlabPage(): ReactNode {
                                 <p><strong>Status:</strong> Active (2024 - Present)</p>
                             </div>
                             <div className="card__footer">
-                                <div style={{ display: 'flex', gap: '0.5rem' }}>
-                                    <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests?scope=all&state=merged&author_username=VijetaPriya" className="button button--secondary button--block" target="_blank">View MRs</a>
-                                    <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab" className="button button--primary button--block" target="_blank">Repo</a>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                                        <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/?sort=closed_at_desc&state=merged&author_username=vijeta004&first_page_size=20" className="button button--secondary button--block" target="_blank">Merged MRs</a>
+                                        <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab" className="button button--primary button--block" target="_blank">Repo</a>
+                                    </div>
+                                    <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/?sort=closed_at_desc&state=opened&author_username=vijeta004&first_page_size=20" className="button button--outline button--primary button--block" target="_blank">Active MRs (Open)</a>
                                 </div>
                             </div>
                         </div>

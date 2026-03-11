@@ -82,6 +82,7 @@ export const projects: Project[] = [
     timeline: {
       startDate: '2024-03-01'
     },
+    image: '/img/projects/hybrid-logistics.png',
     featured: true
   }
 ];
