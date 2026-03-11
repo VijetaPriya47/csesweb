@@ -70,19 +70,33 @@ export const projects: Project[] = [
       startDate: '2023-01-01'
     },
     featured: false
+  },
+  {
+    id: 'hybrid-logistics-engine',
+    title: 'Hybrid Logistics Engine',
+    description: 'Technical documentation and system design details for a highly scalable Hybrid Logistics Engine. It highlights key architectural features such as asynchronous event consistency, bi-directional WebSockets, dynamic pricing, and distributed observability.',
+    shortDescription: 'Technical architecture and system design documentation for a Hybrid Logistics Engine.',
+    liveUrl: 'https://vijetapriya47.github.io/Hybrid-Logistics-Engine/',
+    techStack: ['System Design', 'Distributed Systems', 'REST & gRPC', 'Technical Writing'],
+    category: 'documentation',
+    timeline: {
+      startDate: '2024-03-01'
+    },
+    featured: true
   }
 ];
 
 export const techStacks = [
   'C++',
   'Python',
-  'React',
-  'TypeScript',
-  'JavaScript',
+  'Golang'
   'Algorithms',
   'Data Structures',
   'Competitive Programming',
-  'Technical Writing'
+  'Technical Writing',
+  'System Design',
+  'Architecture',
+  'WebSockets'
 ];
 
 export const categories = [
