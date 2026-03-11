@@ -55,7 +55,7 @@ export default function RideSharingPage(): ReactNode {
                             <div className="card__footer">
                                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                                     <a href="https://github.com/VijetaPriya47" className="button button--secondary button--block">GitHub</a>
-                                    <a href="#" className="button button--primary button--block">Deployed</a>
+                                    <a href="https://vijetapriya47.github.io/Hybrid-Logistics-Engine/" className="button button--primary button--block">Deployed</a>
                                 </div>
                             </div>
                         </div>
