@@ -1,71 +1,110 @@
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 
-export default function GitlabPage(): ReactNode {
+export default function GitLabContributionsPage(): ReactNode {
     return (
         <Layout
-            title="GitLab Open Source Contributions"
-            description="Details of Open Source contributions to GitLab">
+            title="GitLab Engineering Contributions"
+            description="Summary of contributions to the terraform-provider-gitlab repository">
             <main className="container margin-vert--lg">
-                <h1>GitLab Open Source Contributions</h1>
-                <p className="lead">Backend Engineering contributions to the DevOps platform.</p>
+                <h1>GitLab Engineering Contributions</h1>
+                <p className="lead">
+                    Detailed summary of the contributions made to the <code>terraform-provider-gitlab</code> repository,
+                    focusing on technical impact, infrastructure robustness, and implementation details for an SDE profile.
+                </p>
 
                 <div className="row">
-                    <div className="col col--8">
-                        <h2>Overview</h2>
-                        <p>
-                            As an Open Source Contributor to GitLab, I focused on the <strong>Terraform Provider</strong> and core backend services.
-                            My work involved fixing critical race conditions, implementing new data sources, and resolving schema inconsistencies
-                            to improve infrastructure-as-code reliability for thousands of users.
-                        </p>
-
-                        <h3>Key Contributions & Activity</h3>
-
-                        <h4>Open Contributions (Active)</h4>
-                        <ul>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2898" target="_blank">!2898: feat: Add priority field support to project and group labels</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2897" target="_blank">!2897: feat: add gitlab_project_security_settings resource</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2896" target="_blank">!2896: fix(resource/wiki_page): fix title drift for subpages and dashes</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2894" target="_blank">!2894: Refactor: centralize token rotation logic into shared interface</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2804" target="_blank">!2804: feat: add gitlab_compliance_requirement resource</a></li>
-                        </ul>
-
-                        <h4>Recent Merged MRs</h4>
-                        <ul>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2806" target="_blank">!2806: fix: changed GitPod References to Ona</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2805" target="_blank">!2805: feat: add gitlab_group_service_account_access_tokens data source</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2802" target="_blank">!2802: Add gitlab_project_package_dependency_proxy resource</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2722" target="_blank">!2722: Redesigned core auth & expiry logic</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2721" target="_blank">!2721: Implemented gitlab_artifact_file data source</a></li>
-                            <li><a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2719" target="_blank">!2719: Allow gitlab_project_label name updates without replacement</a></li>
-                        </ul>
-
-                        <h3>Tech Stack</h3>
-                        <span className="badge badge--warning margin-right--sm">Go</span>
-                        <span className="badge badge--warning margin-right--sm">Terraform Plugin SDK</span>
-                        <span className="badge badge--warning margin-right--sm">REST API</span>
-                        <span className="badge badge--warning margin-right--sm">CI/CD</span>
-                    </div>
-                    <div className="col col--4">
-                        <div className="card shadow--md">
-                            <div className="card__header">
-                                <h3>Project Stats</h3>
-                            </div>
-                            <div className="card__body">
-                                <p><strong>Role:</strong> Open Source Contributor</p>
-                                <p><strong>Impact:</strong> Core Stability, New Features</p>
-                                <p><strong>Status:</strong> Active (2024 - Present)</p>
-                            </div>
-                            <div className="card__footer">
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                    <div style={{ display: 'flex', gap: '0.5rem' }}>
-                                        <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/?sort=closed_at_desc&state=merged&author_username=vijeta004&first_page_size=20" className="button button--secondary button--block" target="_blank">Merged MRs</a>
-                                        <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab" className="button button--primary button--block" target="_blank">Repo</a>
+                    <div className="col col--12">
+                        <section className="margin-bottom--xl">
+                            <h2>Merged Contributions (7)</h2>
+                            <div className="row">
+                                {[
+                                    {
+                                        title: 'Centralized Token Rotation Logic (!2894)',
+                                        desc: 'Refactored token rotation logic into a shared RotatableToken interface for Project, Group, Personal, and Service Account tokens to improve code maintainability and streamline future bug fixes.'
+                                    },
+                                    {
+                                        title: 'Infrastructure Tooling Update (!2806)',
+                                        desc: 'Updated project documentation and remote development configurations to facilitate the transition from GitPod to Ona, ensuring a seamless setup for contributors.'
+                                    },
+                                    {
+                                        title: 'New Data Source for Service Account Tokens (!2805)',
+                                        desc: 'Implemented the gitlab_group_service_account_access_tokens data source, enabling programmatic lookup of group-level service account credentials.'
+                                    },
+                                    {
+                                        title: 'Maven Package Proxy Support (!2802)',
+                                        desc: 'Added the gitlab_project_package_dependency_proxy resource, utilizing the GitLab GraphQL API to manage project-level Maven registry proxy settings.'
+                                    },
+                                    {
+                                        title: 'Robust Expiry Date Validation (!2722)',
+                                        desc: 'Refactored core DetermineExpiryDate utility to return validation metadata, preventing application-level segfaults and enhancing error handling across all token resources.'
+                                    },
+                                    {
+                                        title: 'CI/CD Artifact Retrieval (!2721)',
+                                        desc: 'Developed the gitlab_artifact_file data source to support both text and binary (base64) downloads of specific CI/CD job artifacts.'
+                                    },
+                                    {
+                                        title: 'Resource Persistence Optimization (!2719)',
+                                        desc: 'Enhanced the gitlab_project_label resource to support in-place renames via numeric ID-based state mapping, preserving historical metadata across GitLab issues and MRs.'
+                                    }
+                                ].map((item, index) => (
+                                    <div key={index} className="col col--4 margin-bottom--lg">
+                                        <div className="card shadow--md h-100" style={{ height: '100%' }}>
+                                            <div className="card__header">
+                                                <h4>{item.title}</h4>
+                                            </div>
+                                            <div className="card__body">
+                                                <p>{item.desc}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/?sort=closed_at_desc&state=opened&author_username=vijeta004&first_page_size=20" className="button button--outline button--primary button--block" target="_blank">Active MRs (Open)</a>
-                                </div>
+                                ))}
                             </div>
-                        </div>
+                        </section>
+
+                        <section className="margin-bottom--xl">
+                            <h2>Open/In-Progress Contributions (4)</h2>
+                            <div className="row">
+                                {[
+                                    {
+                                        title: 'Label Priority Support (!2898)',
+                                        desc: 'Extending label resources to support the priority field, allowing users to define ordered label hierarchies for projects and groups.'
+                                    },
+                                    {
+                                        title: 'Project Security Management (!2897)',
+                                        desc: 'Implementing the gitlab_project_security_settings resource to manage security features like secret validity checks via the GraphQL API.'
+                                    },
+                                    {
+                                        title: 'Wiki Page Title Synchronization (!2896)',
+                                        desc: 'Resolving consistency errors in gitlab_wiki_page by implementing state persistence logic that handles automatic API title transformations for subpages and slugs.'
+                                    },
+                                    {
+                                        title: 'Compliance Framework Management (!2804)',
+                                        desc: 'Introducing the gitlab_compliance_requirement resource to manage complex compliance requirements and their associated security controls using GraphQL.'
+                                    }
+                                ].map((item, index) => (
+                                    <div key={index} className="col col--6 margin-bottom--lg">
+                                        <div className="card shadow--md h-100" style={{ borderLeft: '5px solid #ffa500', height: '100%' }}>
+                                            <div className="card__header">
+                                                <h4>{item.title}</h4>
+                                            </div>
+                                            <div className="card__body">
+                                                <p>{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div className="admonition admonition-tip alert alert--success">
+                    <div className="admonition-heading">
+                        <h5>Technical Impact</h5>
+                    </div>
+                    <div className="admonition-content">
+                        <p>These contributions demonstrate proficiency in <strong>Go</strong>, <strong>Terraform Provider Development</strong>, <strong>GraphQL API integration</strong>, and <strong>distributed systems infrastructure</strong>.</p>
                     </div>
                 </div>
             </main>

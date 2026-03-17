@@ -7,7 +7,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   techStack: string[];
-  category: 'web' | 'mobile' | 'competitive-programming' | 'documentation' | 'other';
+  category: 'web' | 'mobile' | 'competitive-programming' | 'documentation' | 'open-source' | 'other';
   timeline: {
     startDate: string;
     endDate?: string;
@@ -84,6 +84,19 @@ export const projects: Project[] = [
     },
     image: '/img/projects/hybrid-logistics.png',
     featured: true
+  },
+  {
+    id: 'gitlab-contributions',
+    title: 'GitLab Engineering Contributions',
+    description: 'Significant technical contributions to the terraform-provider-gitlab repository, including refactoring token rotation logic, implementing new data sources, and optimizing resource persistence during renames.',
+    shortDescription: 'Technical contributions to GitLab\'s Terraform provider infrastructure.',
+    liveUrl: '/projects/gitlab',
+    techStack: ['Go', 'Terraform', 'GraphQL', 'Open Source', 'CI/CD'],
+    category: 'open-source',
+    timeline: {
+      startDate: '2024-06-01'
+    },
+    featured: true
   }
 ];
 
@@ -97,7 +110,10 @@ export const techStacks = [
   'Technical Writing',
   'System Design',
   'Architecture',
-  'WebSockets'
+  'WebSockets',
+  'Terraform',
+  'GraphQL',
+  'CI/CD'
 ];
 
 export const categories = [
@@ -105,5 +121,6 @@ export const categories = [
   { id: 'competitive-programming', label: 'Competitive Programming' },
   { id: 'web', label: 'Web Development' },
   { id: 'documentation', label: 'Documentation' },
+  { id: 'open-source', label: 'Open Source' },
   { id: 'other', label: 'Other' }
 ];
