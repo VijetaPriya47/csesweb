@@ -1,39 +1,624 @@
 [
-    {
-        "word": "Distributed Systems",
-        "definition": "a Distributed System is a collection of independent computers that appears to its users as a single coherent system. Instead of sharing memory or a clock, these computers communicate by passing messages over a network to achieve a common goal.",
-        "groups": [],
-        "id": "d9ce4ed6-0ce0-40c6-9047-f0917294781e",
-        "createdAt": 1769932805109
-    },
-    {
-        "id": "1",
-        "word": "Git",
-        "definition": "A distributed version control system.",
-        "groups": [
-            "DevOps",
-            "Tools"
-        ],
-        "createdAt": 1700000000000
-    },
-    {
-        "id": "2",
-        "word": "React",
-        "definition": "A JavaScript library for building user interfaces.",
-        "groups": [
-            "Frontend",
-            "Library"
-        ],
-        "createdAt": 1700000000001
-    },
-    {
-        "id": "3",
-        "word": "Docusaurus",
-        "definition": "A static site generator built on React.",
-        "groups": [
-            "Frontend",
-            "Tools"
-        ],
-        "createdAt": 1700000000002
-    }
+  {
+    "word": "Protobuf",
+    "definition": "Binary serialization format used by gRPC for efficient data exchange.",
+    "groups": [
+      "APIs"
+    ],
+    "id": "4d1ba4fa-85ab-4b82-a471-e4eaf9edc36b",
+    "createdAt": 1774067033500
+  },
+  {
+    "word": "gRPC",
+    "definition": "High-performance RPC framework using HTTP/2 and Protobuf (used for low-latency inter-service communication).",
+    "groups": [
+      "APIs"
+    ],
+    "id": "4dd738a6-6ebb-4b2c-b34f-f44477804d68",
+    "createdAt": 1774066992887
+  },
+  {
+    "word": "GraphQL",
+    "definition": "Query language for APIs that lets clients request exactly the data they need (used in the new Terraform resource for package proxy).",
+    "groups": [
+      "APIs"
+    ],
+    "id": "a02a01d9-d916-4f66-8a15-a41e05cb4f4b",
+    "createdAt": 1774066954697
+  },
+  {
+    "word": "REST",
+    "definition": "Architectural style for APIs using HTTP methods (GET, POST, etc.) and JSON (used for external clients in your logistics engine).",
+    "groups": [
+      "APIs"
+    ],
+    "id": "c1598bed-186a-4194-8f42-172efac8a038",
+    "createdAt": 1774066915097
+  },
+  {
+    "word": "Bash",
+    "definition": "Unix shell scripting language for automation and CI/CD pipelines.",
+    "groups": [
+      "Language"
+    ],
+    "id": "e109031a-4380-4d5f-aab3-9e1f3970bbe2",
+    "createdAt": 1774066880022
+  },
+  {
+    "word": "SQL",
+    "definition": "Language for managing and querying relational databases.",
+    "groups": [
+      "Language"
+    ],
+    "id": "e9e010c3-1f45-41cf-8c9b-b94ca83d4e56",
+    "createdAt": 1774066849412
+  },
+  {
+    "word": "Python",
+    "definition": "Versatile scripting language for automation, data processing, and testing.",
+    "groups": [
+      "Language"
+    ],
+    "id": "9caa7229-28ef-4c70-94c4-e746993957b7",
+    "createdAt": 1774066820956
+  },
+  {
+    "word": "Go(Golang)",
+    "definition": "Statically-typed, concurrent language ideal for microservices, CLI tools, and cloud-native apps (used in GitLab Terraform Provider).",
+    "groups": [
+      "Language"
+    ],
+    "id": "444efb7f-9020-4537-847e-fa70f5d5ac50",
+    "createdAt": 1774066789029
+  },
+  {
+    "word": "C++",
+    "definition": "High-performance, object-oriented language used for low-latency systems (your Trading Low Latency project).",
+    "groups": [
+      "Language"
+    ],
+    "id": "45eafde5-13ff-406f-84af-55a42cdf021c",
+    "createdAt": 1774066739287
+  },
+  {
+    "word": "Distributed Systems",
+    "definition": "a Distributed System is a collection of independent computers that appears to its users as a single coherent system. Instead of sharing memory or a clock, these computers communicate by passing messages over a network to achieve a common goal.",
+    "groups": [],
+    "id": "d9ce4ed6-0ce0-40c6-9047-f0917294781e",
+    "createdAt": 1769932805109
+  },
+  {
+    "id": "1",
+    "word": "Git",
+    "definition": "A distributed version control system.",
+    "groups": [
+      "DevOps",
+      "Tools"
+    ],
+    "createdAt": 1700000000000
+  },
+  {
+    "id": "2",
+    "word": "React",
+    "definition": "A JavaScript library for building user interfaces.",
+    "groups": [
+      "Frontend",
+      "Library"
+    ],
+    "createdAt": 1700000000001
+  },
+  {
+    "id": "3",
+    "word": "Docusaurus",
+    "definition": "A static site generator built on React.",
+    "groups": [
+      "Frontend",
+      "Tools"
+    ],
+    "createdAt": 1700000000002
+  },
+  {
+    "word": "MongoDB",
+    "definition": "NoSQL document database (used in Hybrid Logistics Engine with 2dsphere indexing).",
+    "groups": [
+      "Databases"
+    ],
+    "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "createdAt": 1774067100000
+  },
+  {
+    "word": "2dsphere indexing",
+    "definition": "MongoDB geospatial index for storing and querying latitude/longitude points efficiently (enabled sub-50ms radius searches).",
+    "groups": [
+      "Databases"
+    ],
+    "id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "createdAt": 1774067140000
+  },
+  {
+    "word": "Geospatial Queries",
+    "definition": "Queries that find documents within a geographic radius (core of your matching engine).",
+    "groups": [
+      "Databases"
+    ],
+    "id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+    "createdAt": 1774067180000
+  },
+  {
+    "word": "RabbitMQ",
+    "definition": "Message broker implementing AMQP for reliable async communication (used for fault-tolerant workflows).",
+    "groups": [
+      "Messaging"
+    ],
+    "id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+    "createdAt": 1774067220000
+  },
+  {
+    "word": "consumer idempotency",
+    "definition": "Making message consumers safe to retry without duplicating work (handled ‘at-least-once’ delivery in your engine).",
+    "groups": [
+      "Messaging"
+    ],
+    "id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+    "createdAt": 1774067260000
+  },
+  {
+    "word": "at-least-once delivery guarantees",
+    "definition": "Messaging guarantee that a message is delivered ≥1 time (managed with idempotency to avoid duplicates).",
+    "groups": [
+      "Messaging"
+    ],
+    "id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c",
+    "createdAt": 1774067300000
+  },
+  {
+    "word": "Context Propagation (over RabbitMQ)",
+    "definition": "Passing OpenTelemetry trace context through message headers so async flows remain traceable in Jaeger.",
+    "groups": [
+      "Messaging"
+    ],
+    "id": "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
+    "createdAt": 1774067340000
+  },
+  {
+    "word": "OpenTelemetry (OTel)",
+    "definition": "Vendor-neutral standard for distributed tracing, metrics, and logs (instrumented across all microservices).",
+    "groups": [
+      "Observability"
+    ],
+    "id": "b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e",
+    "createdAt": 1774067380000
+  },
+  {
+    "word": "distributed tracing",
+    "definition": "Technique to track a request across multiple services (visualised end-to-end in Jaeger).",
+    "groups": [
+      "Observability"
+    ],
+    "id": "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
+    "createdAt": 1774067420000
+  },
+  {
+    "word": "Jaeger",
+    "definition": "Open-source distributed tracing platform (used to visualise async request flows).",
+    "groups": [
+      "Observability"
+    ],
+    "id": "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a",
+    "createdAt": 1774067460000
+  },
+  {
+    "word": "Kubernetes Events",
+    "definition": "Objects that record state changes inside a cluster (added for automatic certificate rotation).",
+    "groups": [
+      "Observability"
+    ],
+    "id": "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b",
+    "createdAt": 1774067500000
+  },
+  {
+    "word": "automatic certificate rotation",
+    "definition": "Process of renewing TLS certificates without manual intervention (added observability for KubeadmControlPlane).",
+    "groups": [
+      "Observability"
+    ],
+    "id": "f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c",
+    "createdAt": 1774067540000
+  },
+  {
+    "word": "Kubernetes",
+    "definition": "Container orchestration platform (main focus of your open-source contributions).",
+    "groups": [
+      "Infrastructure"
+    ],
+    "id": "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d",
+    "createdAt": 1774067580000
+  },
+  {
+    "word": "Docker",
+    "definition": "Platform for building, shipping, and running containerised applications.",
+    "groups": [
+      "Infrastructure"
+    ],
+    "id": "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e",
+    "createdAt": 1774067620000
+  },
+  {
+    "word": "CAPA (AWS Provider)",
+    "definition": "Cluster API AWS Provider (Kubernetes sub-project for provisioning AWS clusters; you fixed test flakiness).",
+    "groups": [
+      "Kubernetes"
+    ],
+    "id": "c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f",
+    "createdAt": 1774067660000
+  },
+  {
+    "word": "Cluster API (CAPI)",
+    "definition": "Kubernetes project for declarative cluster lifecycle management (you contributed logic and observability fixes).",
+    "groups": [
+      "Kubernetes"
+    ],
+    "id": "d6e7f8a9-b0c1-4d2e-3f4a-5b6c7d8e9f0a",
+    "createdAt": 1774067700000
+  },
+  {
+    "word": "KubeadmControlPlane",
+    "definition": "CAPI resource that manages control-plane nodes using kubeadm.",
+    "groups": [
+      "Kubernetes"
+    ],
+    "id": "e7f8a9b0-c1d2-4e3f-4a5b-6c7d8e9f0a1b",
+    "createdAt": 1774067740000
+  },
+  {
+    "word": "finalizers",
+    "definition": "Kubernetes mechanism to block resource deletion until cleanup is done (you fixed removal when ownerRef was missing).",
+    "groups": [
+      "Kubernetes"
+    ],
+    "id": "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c",
+    "createdAt": 1774067780000
+  },
+  {
+    "word": "ownerRef",
+    "definition": "Metadata field linking child resources to their owner for garbage collection.",
+    "groups": [
+      "Kubernetes"
+    ],
+    "id": "a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3d",
+    "createdAt": 1774067820000
+  },
+  {
+    "word": "Eventually assertions",
+    "definition": "Ginkgo/Gomega testing pattern that waits until a condition is true (used to stabilise flaky tests).",
+    "groups": [
+      "Kubernetes"
+    ],
+    "id": "b0c1d2e3-f4a5-4b6c-7d8e-9f0a1b2c3d4e",
+    "createdAt": 1774067860000
+  },
+  {
+    "word": "TestROSANetworkReconciler",
+    "definition": "Specific test in CAPA for ROSA (Red Hat OpenShift on AWS) network reconciliation logic.",
+    "groups": [
+      "Kubernetes"
+    ],
+    "id": "c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f",
+    "createdAt": 1774067900000
+  },
+  {
+    "word": "AWS",
+    "definition": "Amazon Web Services cloud platform.",
+    "groups": [
+      "Cloud"
+    ],
+    "id": "d2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a",
+    "createdAt": 1774067940000
+  },
+  {
+    "word": "GCP",
+    "definition": "Google Cloud Platform.",
+    "groups": [
+      "Cloud"
+    ],
+    "id": "e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b",
+    "createdAt": 1774067980000
+  },
+  {
+    "word": "Terraform",
+    "definition": "Infrastructure-as-Code tool (you heavily contributed to the official GitLab provider).",
+    "groups": [
+      "IaC"
+    ],
+    "id": "f4a5b6c7-d8e9-4f0a-1b2c-3d4e5f6a7b8c",
+    "createdAt": 1774068020000
+  },
+  {
+    "word": "GitLab Terraform Provider",
+    "definition": "Official Terraform plugin for managing GitLab resources via Go code.",
+    "groups": [
+      "IaC"
+    ],
+    "id": "a5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d",
+    "createdAt": 1774068060000
+  },
+  {
+    "word": "GraphQL API (in Terraform)",
+    "definition": "You used GitLab’s GraphQL API to create a new managed resource.",
+    "groups": [
+      "IaC"
+    ],
+    "id": "b6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e",
+    "createdAt": 1774068100000
+  },
+  {
+    "word": "Maven registry",
+    "definition": "Repository for Java/Maven artifacts (you added Terraform resource for dependency proxy settings).",
+    "groups": [
+      "IaC"
+    ],
+    "id": "c7d8e9f0-a1b2-4c3d-4e5f-6a7b8c9d0e1f",
+    "createdAt": 1774068140000
+  },
+  {
+    "word": "package dependency proxy settings",
+    "definition": "GitLab feature that proxies external registries (Maven) for security and caching.",
+    "groups": [
+      "IaC"
+    ],
+    "id": "d8e9f0a1-b2c3-4d4e-5f6a-7b8c9d0e1f2a",
+    "createdAt": 1774068180000
+  },
+  {
+    "word": "Group Service Account tokens",
+    "definition": "GitLab tokens for service accounts at group level (you added “Read” capability).",
+    "groups": [
+      "IaC"
+    ],
+    "id": "e9f0a1b2-c3d4-4e5f-6a7b-8c9d0e1f2a3b",
+    "createdAt": 1774068220000
+  },
+  {
+    "word": "token rotation logic",
+    "definition": "Mechanism to automatically refresh expiring tokens (you refactored it into a shared interface).",
+    "groups": [
+      "IaC"
+    ],
+    "id": "f0a1b2c3-d4e5-4f6a-7b8c-9d0e1f2a3b4c",
+    "createdAt": 1774068260000
+  },
+  {
+    "word": "API Schema v1 to v2",
+    "definition": "Breaking change you contributed (renaming project labels without triggering replacement).",
+    "groups": [
+      "IaC"
+    ],
+    "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "createdAt": 1774068300000
+  },
+  {
+    "word": "Microservices",
+    "definition": "Architecture where an application is built as a set of small, independent services.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "createdAt": 1774068340000
+  },
+  {
+    "word": "Distributed Microservices",
+    "definition": "Microservices spread across multiple machines/networks.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+    "createdAt": 1774068380000
+  },
+  {
+    "word": "APIs",
+    "definition": "Application Programming Interfaces (you built both internal gRPC and external REST).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+    "createdAt": 1774068420000
+  },
+  {
+    "word": "API Gateway",
+    "definition": "Single entry point that routes and aggregates requests (your custom gateway prevented noisy-neighbor issues).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+    "createdAt": 1774068460000
+  },
+  {
+    "word": "noisy neighbor latency",
+    "definition": "Problem where one tenant/service slows down others on shared resources.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c",
+    "createdAt": 1774068500000
+  },
+  {
+    "word": "System Design (LLD/HLD)",
+    "definition": "High-Level Design (overall architecture) + Low-Level Design (class diagrams, data flow).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "a7b8c9d0-e1f2-4a3b-4c5d-6e7f8a9b0c1d",
+    "createdAt": 1774068540000
+  },
+  {
+    "word": "SOLID Principles",
+    "definition": "Five OOP design principles (Single Responsibility, Open-Closed, etc.) — explicitly followed in logistics engine.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "b8c9d0e1-f2a3-4b4c-5d6e-7f8a9b0c1d2e",
+    "createdAt": 1774068580000
+  },
+  {
+    "word": "OOPs",
+    "definition": "Object-Oriented Programming concepts (encapsulation, inheritance, polymorphism — used in trading system).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
+    "createdAt": 1774068620000
+  },
+  {
+    "word": "Concurrency",
+    "definition": "Handling multiple tasks simultaneously (critical in both trading system and microservices).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "d0e1f2a3-b4c5-4d6e-7f8a-9b0c1d2e3f4a",
+    "createdAt": 1774068660000
+  },
+  {
+    "word": "Scalable & Modular architecture",
+    "definition": "Design that grows easily and can be changed without breaking everything.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "e1f2a3b4-c5d6-4e7f-8a9b-0c1d2e3f4a5b",
+    "createdAt": 1774068700000
+  },
+  {
+    "word": "low-latency inter-service communication",
+    "definition": "Fast communication between services (achieved via gRPC).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "f2a3b4c5-d6e7-4f8a-9b0c-1d2e3f4a5b6c",
+    "createdAt": 1774068740000
+  },
+  {
+    "word": "fault-tolerant asynchronous workflows",
+    "definition": "Workflows that continue despite failures (RabbitMQ + idempotency).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "a3b4c5d6-e7f8-4a9b-0c1d-2e3f4a5b6c7d",
+    "createdAt": 1774068780000
+  },
+  {
+    "word": "GitHub Actions",
+    "definition": "CI/CD platform built into GitHub (used for testing your contributions).",
+    "groups": [
+      "Tools"
+    ],
+    "id": "b4c5d6e7-f8a9-4b0c-1d2e-3f4a5b6c7d8e",
+    "createdAt": 1774068820000
+  },
+  {
+    "word": "CI/CD",
+    "definition": "Continuous Integration / Continuous Deployment pipeline.",
+    "groups": [
+      "Tools"
+    ],
+    "id": "c5d6e7f8-a9b0-4c1d-2e3f-4a5b6c7d8e9f",
+    "createdAt": 1774068860000
+  },
+  {
+    "word": "Spdlog",
+    "definition": "Fast C++ logging library (used for benchmark logging in trading system).",
+    "groups": [
+      "Tools"
+    ],
+    "id": "d6e7f8a9-b0c1-4d2e-3f4a-5b6c7d8e9f0a",
+    "createdAt": 1774068900000
+  },
+  {
+    "word": "benchmark logging",
+    "definition": "Logging performance metrics during tests.",
+    "groups": [
+      "Tools"
+    ],
+    "id": "e7f8a9b0-c1d2-4e3f-4a5b-6c7d8e9f0a1b",
+    "createdAt": 1774068940000
+  },
+  {
+    "word": "unit tests",
+    "definition": "Tests for individual functions/modules.",
+    "groups": [
+      "Tools"
+    ],
+    "id": "f8a9b0c1-d2e3-4f4a-5b6c-7d8e9f0a1b2c",
+    "createdAt": 1774068980000
+  },
+  {
+    "word": "E2E tests",
+    "definition": "End-to-End tests that simulate real user flows.",
+    "groups": [
+      "Tools"
+    ],
+    "id": "a9b0c1d2-e3f4-4a5b-6c7d-8e9f0a1b2c3d",
+    "createdAt": 1774069020000
+  },
+  {
+    "word": "performance telemetry",
+    "definition": "Real-time performance metrics collection.",
+    "groups": [
+      "Tools"
+    ],
+    "id": "b0c1d2e3-f4a5-4b6c-7d8e-9f0a1b2c3d4e",
+    "createdAt": 1774069060000
+  },
+  {
+    "word": "shared interface",
+    "definition": "Design pattern to avoid code duplication (you used it for token rotation logic).",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f",
+    "createdAt": 1774069100000
+  },
+  {
+    "word": "DetermineExpiryDate signature",
+    "definition": "Function signature you fixed so callers can properly handle nil return values.",
+    "groups": [
+      "IaC"
+    ],
+    "id": "d2e3f4a5-b6c7-4d8e-9f0a-1b2c3d4e5f6a",
+    "createdAt": 1774069140000
+  },
+  {
+    "word": "project labels (without resource replacement)",
+    "definition": "Terraform behaviour where updating a label no longer destroys/recreates the resource.",
+    "groups": [
+      "IaC"
+    ],
+    "id": "e3f4a5b6-c7d8-4e9f-0a1b-2c3d4e5f6a7b",
+    "createdAt": 1774069180000
+  },
+  {
+    "word": "technical debt reduction",
+    "definition": "Refactoring to make future changes easier and safer.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "f4a5b6c7-d8e9-4f0a-1b2c-3d4e5f6a7b8c",
+    "createdAt": 1774069220000
+  },
+  {
+    "word": "custom API Gateway",
+    "definition": "You built one to combine gRPC + REST safely.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "a5b6c7d8-e9f0-4a1b-2c3d-4e5f6a7b8c9d",
+    "createdAt": 1774069260000
+  },
+  {
+    "word": "hybrid communication pattern",
+    "definition": "Mixing gRPC (internal) and REST (external) in one system.",
+    "groups": [
+      "Architecture"
+    ],
+    "id": "b6c7d8e9-f0a1-4b2c-3d4e-5f6a7b8c9d0e",
+    "createdAt": 1774069300000
+  }
 ]
