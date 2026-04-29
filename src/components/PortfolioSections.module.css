@@ -2,8 +2,6 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
-    font-family: 'Fira Code', 'Roboto Mono', monospace;
-    font-family: 'Fira Code', 'Roboto Mono', monospace;
     color: var(--ifm-color-content);
 }
 
@@ -177,7 +175,6 @@
 }
 
 .googleCardLabel {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 0.78rem;
     color: #5f6368;
     letter-spacing: 0.02em;
@@ -187,7 +184,6 @@
 
 .googleCardTitle {
     margin: 0;
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     color: #202124;
     font-size: 1.28rem;
     line-height: 1.3;
@@ -196,7 +192,6 @@
 
 .googleCardDescription {
     margin: 0;
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 0.98rem;
     color: #3c4043;
     line-height: 1.55;
@@ -209,7 +204,6 @@
 }
 
 .googleTag {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 0.8rem;
     color: #174ea6;
     background: #e8f0fe;
@@ -230,7 +224,6 @@
 }
 
 .googleMrLabel {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 0.78rem;
     color: #5f6368;
     letter-spacing: 0.03em;
@@ -245,7 +238,6 @@
 }
 
 .googleMrLink {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 0.78rem;
     color: #1a73e8;
     background: #eef3fd;
@@ -260,7 +252,6 @@
 }
 
 .googleCardLink {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
     color: #1a73e8;
     text-decoration: none;
     font-size: 0.95rem;
@@ -336,7 +327,6 @@
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     color: #202124;
-    font-family: 'Circular Std', 'Helvetica', sans-serif;
     /* Try to mimic Spotify font */
 }
 

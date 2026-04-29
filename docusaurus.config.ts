@@ -68,7 +68,6 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'left' },
-        { to: '/', label: 'Projects', position: 'left' },
         { to: '/dictionary', label: 'Dictionary', position: 'left' },
         {
           type: 'docSidebar',
@@ -76,7 +75,6 @@ const config: Config = {
           position: 'left',
           label: 'CSES Solutions',
         },
-        { to: '/', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/VijetaPriya47',
           label: 'GitHub',

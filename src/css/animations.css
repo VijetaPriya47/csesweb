@@ -130,7 +130,6 @@ a {
 /* Navbar animations */
 .navbar {
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
 }
 
 .navbar--dark {

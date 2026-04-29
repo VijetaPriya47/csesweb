@@ -9,6 +9,43 @@ const ResumeSection = () => (
             <div className={styles.timeline}>
                 <div className={styles.experienceItem}>
                     <div className={styles.logoContainer}>
+                        <img src="https://github.com/kubernetes.png" alt="Kubernetes" className={styles.timelineLogo} />
+                    </div>
+                    <div className={styles.meta}>
+                        <span className={styles.date}>[Jan 2026 - Present]</span>
+                        <span className={styles.role}>Kubernetes (Open Source Contributor)</span>
+                    </div>
+                    <div className={styles.content}>
+                        <ul className={styles.list}>
+                            <li>
+                                <strong>Core Kubernetes - Goroutine Leak Fix:</strong> Fixed a goroutine leak in <code>TestNodeSyncResync</code> by correctly handling the <code>opChan</code> lifecycle, preventing test hangs.
+                                <a href="https://github.com/kubernetes/kubernetes/pull/135217" target="_blank" rel="noreferrer"> [MR !135217]</a>
+                            </li>
+                            <li>
+                                <strong>CAPA (AWS Provider) - Test Stability:</strong> Resolved flakiness in <code>TestROSANetworkReconciler</code> by implementing <code>Eventually</code> assertions.
+                                <a href="https://github.com/kubernetes-sigs/cluster-api-provider-aws/pull/5861" target="_blank" rel="noreferrer"> [MR !5861]</a>
+                            </li>
+                            <li>
+                                <strong>Cluster API (CAPI) - Logic Fix:</strong> Updated controller to correctly remove finalizers during deletion if <code>ownerRef</code> was never set.
+                                <a href="https://github.com/kubernetes-sigs/cluster-api/pull/13239" target="_blank" rel="noreferrer"> [MR !13239]</a>
+                            </li>
+                            <li>
+                                <strong>Cluster API (CAPI) - Observability / Security:</strong> Added Kubernetes Events for automatic certificate rotation in <code>KubeadmControlPlane</code>.
+                                <a href="https://github.com/kubernetes-sigs/cluster-api/pull/13242" target="_blank" rel="noreferrer"> [PR #13242]</a>
+                            </li>
+                            <li>
+                                <strong>Cluster API (CAPI) - Feature Proposal:</strong> Proposed adding <code>maxRetry</code> to <code>RemediationStrategy</code> in MachineDeployments to align with KCP remediation.
+                                <a href="https://github.com/kubernetes-sigs/cluster-api/issues/12553" target="_blank" rel="noreferrer"> [Issue #12553]</a>
+                            </li>
+                            <li>
+                                <strong>Cluster API (CAPI) - Behavior Enhancement:</strong> Participated in discussion to improve <code>MachineDrainRules</code> <code>WaitCompleted</code> behavior for completed pods.
+                                <a href="https://github.com/kubernetes-sigs/cluster-api/issues/12920" target="_blank" rel="noreferrer"> [Issue #12920]</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className={styles.experienceItem}>
+                    <div className={styles.logoContainer}>
                     <img src="/csesweb/img/gitlab.png" alt="GitLab" className={styles.timelineLogo} />
                     </div>
                     <div className={styles.meta}>
