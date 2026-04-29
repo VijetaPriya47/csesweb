@@ -2,8 +2,7 @@ import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import TerminalHero from '@site/src/components/TerminalHero';
 import PortfolioSections from '@site/src/components/PortfolioSections';
-
-import Link from '@docusaurus/Link';
+import MediumCards from '@site/src/components/MediumCards';
 
 export default function Home(): ReactNode {
   return (
@@ -13,13 +12,13 @@ export default function Home(): ReactNode {
       <main>
         <TerminalHero />
 
-        <div className="read-blog-container">
-          <Link to="/blog" className="read-blog-btn">
-            Read my Blog ➜
-          </Link>
-        </div>
-
         <PortfolioSections />
+        <section id="blog" className="home-blog-section">
+          <div className="home-blog-content">
+            <h2 className="home-blog-heading">:: BLOG / MEDIUM_POSTS</h2>
+            <MediumCards />
+          </div>
+        </section>
       </main>
     </Layout>
   );

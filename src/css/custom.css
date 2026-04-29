@@ -6,6 +6,7 @@
 
 /* Global Font Import - Fira Code */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* You can override the default Infima variables here. */
 :root {
@@ -22,6 +23,12 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: #f8f9fa;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #ffffff;
+  --site-bg-glow-1: rgba(26, 115, 232, 0.14);
+  --site-bg-glow-2: rgba(52, 168, 83, 0.12);
+  --site-bg-glow-3: rgba(251, 188, 5, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -41,6 +48,9 @@
   --ifm-background-color: #0d1117;
   --ifm-navbar-background-color: #161b22;
   --ifm-footer-background-color: #161b22;
+  --site-bg-glow-1: rgba(88, 166, 255, 0.18);
+  --site-bg-glow-2: rgba(37, 194, 160, 0.14);
+  --site-bg-glow-3: rgba(121, 192, 255, 0.1);
 }
 
 /* Force everything to monospace if not inherited */
@@ -57,10 +67,48 @@ textarea {
   font-family: 'Fira Code', 'Roboto Mono', monospace !important;
 }
 
+body {
+  background-color: var(--ifm-background-color);
+  background-image:
+    radial-gradient(700px circle at 10% 12%, var(--site-bg-glow-1), transparent 62%),
+    radial-gradient(600px circle at 88% 20%, var(--site-bg-glow-2), transparent 64%),
+    radial-gradient(800px circle at 50% 100%, var(--site-bg-glow-3), transparent 70%);
+  background-attachment: fixed;
+}
+
+.main-wrapper {
+  background: transparent !important;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(26, 115, 232, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 115, 232, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+#__docusaurus {
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme='dark'] body::before {
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(88, 166, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, 0.08) 1px, transparent 1px);
+}
+
 /* Reduce navbar padding */
 .navbar {
   padding: 0.5rem 1rem !important;
-  border-bottom: 1px solid #30363d;
+  border-bottom: 1px solid #dadce0;
 }
 
 .navbar__inner {
@@ -116,32 +164,32 @@ div[role="region"][aria-label="Skip to main content"],
 .navbar-sidebar { ... }
 */
 
-/* Read Blog Button on Homepage */
-.read-blog-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-  /* Space between terminal and experience */
+/* Blog section on homepage */
+.home-blog-section {
   width: 100%;
+  margin: 2rem 0 4rem;
 }
 
-.read-blog-btn {
-  background-color: var(--ifm-color-primary);
-  color: white !important;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid var(--ifm-color-primary-dark);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+.home-blog-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.read-blog-btn:hover {
-  background-color: var(--ifm-color-primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
+.home-blog-heading {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #dadce0;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: #30363d;
+}
+
+[data-theme='dark'] .home-blog-heading {
+  border-bottom-color: #30363d;
 }

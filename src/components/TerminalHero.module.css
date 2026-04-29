@@ -1,21 +1,21 @@
 .terminalContainer {
-  background-color: #0d1117;
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 24px rgba(60, 64, 67, 0.2);
   font-family: 'Fira Code', 'Roboto Mono', monospace;
   margin: 4rem auto;
   max-width: 800px;
   width: 90%;
   overflow: hidden;
-  border: 1px solid #30363d;
+  border: 1px solid #dadce0;
 }
 
 .terminalHeader {
-  background-color: #161b22;
+  background-color: #f1f3f4;
   padding: 10px 15px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #30363d;
+  border-bottom: 1px solid #dadce0;
 }
 
 .circle {
@@ -26,7 +26,7 @@
 }
 
 .title {
-  color: #8b949e;
+  color: #5f6368;
   font-size: 0.8rem;
   margin-left: auto;
   margin-right: auto;
@@ -36,10 +36,11 @@
   padding: 20px;
   height: 400px;
   overflow-y: auto;
-  color: #c9d1d9;
+  color: #202124;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
+  background: #ffffff;
 }
 
 .line {
@@ -49,11 +50,11 @@
 }
 
 .command {
-  color: #8b949e;
+  color: #5f6368;
 }
 
 .output {
-  color: #3fb950;
+  color: #188038;
 }
 
 .inputLine {
@@ -63,16 +64,49 @@
 }
 
 .prompt {
-  color: #58a6ff;
+  color: #1a73e8;
   margin-right: 10px;
 }
 
 .input {
   background: transparent;
   border: none;
-  color: #c9d1d9;
+  color: #202124;
   font-family: inherit;
   font-size: inherit;
   width: 100%;
   outline: none;
+}
+
+[data-theme='dark'] .terminalContainer {
+  background-color: #0d1117;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: #30363d;
+}
+
+[data-theme='dark'] .terminalHeader {
+  background-color: #161b22;
+  border-bottom-color: #30363d;
+}
+
+[data-theme='dark'] .title,
+[data-theme='dark'] .command {
+  color: #8b949e;
+}
+
+[data-theme='dark'] .terminalBody {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+[data-theme='dark'] .output {
+  color: #3fb950;
+}
+
+[data-theme='dark'] .prompt {
+  color: #58a6ff;
+}
+
+[data-theme='dark'] .input {
+  color: #c9d1d9;
 }

@@ -48,21 +48,7 @@ const config: Config = {
           editUrl:
             'https://github.com/VijetaPriya47/csesweb/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/VijetaPriya47/csesweb/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: ['./src/css/custom.css', './src/css/portfolio.css', './src/css/cses-docs.css', './src/css/animations.css', './src/css/dictionary.css', './src/css/flip-card.css'],
         },
@@ -82,7 +68,7 @@ const config: Config = {
       },
       items: [
         { to: '/', label: 'Home', position: 'left' },
-        { to: '/projects', label: 'Projects', position: 'left' },
+        { to: '/', label: 'Projects', position: 'left' },
         { to: '/dictionary', label: 'Dictionary', position: 'left' },
         {
           type: 'docSidebar',
@@ -90,7 +76,7 @@ const config: Config = {
           position: 'left',
           label: 'CSES Solutions',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/VijetaPriya47',
           label: 'GitHub',
@@ -110,7 +96,7 @@ const config: Config = {
             },
             {
               label: 'Projects',
-              to: '/projects',
+              to: '/',
             },
             {
               label: 'Dictionary',
@@ -148,7 +134,7 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: '/',
             },
             {
               label: 'Resume',

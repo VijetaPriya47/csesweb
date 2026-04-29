@@ -1,19 +1,15 @@
 import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Link from '@docusaurus/Link';
 import styles from './PortfolioSections.module.css';
 
-const ResumeSection = () => {
-    const gitlabLogoUrl = useBaseUrl('/img/projects/gitlab-logo.png');
-    const jubilantLogoUrl = useBaseUrl('/img/jubilant.jpeg');
-    const askSeniorLogoUrl = useBaseUrl('/img/asksenior.jpeg');
-
-    return (
+const ResumeSection = () => (
         <div className={styles.section}>
             <h2 className={styles.heading}>:: SYSTEM_LOGS / EXPERIENCE</h2>
             <div className={styles.timeline}>
                 <div className={styles.experienceItem}>
                     <div className={styles.logoContainer}>
-                        <img src={gitlabLogoUrl} alt="GitLab" className={styles.timelineLogo} />
+                    <img src="/csesweb/img/gitlab.png" alt="GitLab" className={styles.timelineLogo} />
                     </div>
                     <div className={styles.meta}>
                         <span className={styles.date}>[2024 - Present]</span>
@@ -35,15 +31,15 @@ const ResumeSection = () => {
                             </li>
                             <li>
                                 <strong>Add priority field support:</strong> Enabled priority field for project and group labels to improve categorization.
-                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2898" target="_blank" rel="noreferrer"> [MR !2898]</a>
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2898" target="_blank" rel="noreferrer"> [PR #2898]</a>
                             </li>
                             <li>
                                 <strong>Project Security Settings:</strong> Implemented <code>gitlab_project_security_settings</code> resource for automated security management.
-                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2897" target="_blank" rel="noreferrer"> [MR !2897]</a>
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2897" target="_blank" rel="noreferrer"> [PR #2897]</a>
                             </li>
                             <li>
                                 <strong>Wiki Subpage Drift Fix:</strong> Resolved title drift issues for wiki subpages and handled special characters in slugs.
-                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2896" target="_blank" rel="noreferrer"> [MR !2896]</a>
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2896" target="_blank" rel="noreferrer"> [PR #2896]</a>
                             </li>
                             <li>
                                 <strong>Centralized Token Rotation:</strong> Refactored token handling by centralizing rotation logic into a shared interface.
@@ -51,7 +47,7 @@ const ResumeSection = () => {
                             </li>
                             <li>
                                 <strong>Compliance Requirements:</strong> Added <code>gitlab_compliance_requirement</code> resource to enhance enterprise compliance workflows.
-                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2804" target="_blank" rel="noreferrer"> [MR !2804]</a>
+                                <a href="https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2804" target="_blank" rel="noreferrer"> [PR #2804]</a>
                             </li>
                             <li>
                                 <strong>Group Service Account Tokens:</strong> Implemented data source for group service account access tokens.
@@ -70,7 +66,7 @@ const ResumeSection = () => {
                 </div>
                 <div className={styles.experienceItem}>
                     <div className={styles.logoContainer}>
-                        <img src={jubilantLogoUrl} alt="Jubilant Ingrevia" className={styles.timelineLogo} />
+                    <img src="/csesweb/img/jubilant.jpeg" alt="Jubilant Ingrevia" className={styles.timelineLogo} />
                     </div>
                     <div className={styles.meta}>
                         <span className={styles.date}>[Jun 2025 - Jul 2025]</span>
@@ -89,7 +85,7 @@ const ResumeSection = () => {
                 </div>
                 <div className={styles.experienceItem}>
                     <div className={styles.logoContainer}>
-                        <img src={askSeniorLogoUrl} alt="Ask Senior" className={styles.timelineLogo} />
+                    <img src="/csesweb/img/asksenior.jpeg" alt="Ask Senior" className={styles.timelineLogo} />
                     </div>
                     <div className={styles.meta}>
                         <span className={styles.date}>[2023 - 2024]</span>
@@ -105,28 +101,73 @@ const ResumeSection = () => {
             </div>
         </div>
     );
-};
+
+const featuredProjects = [
+    {
+        title: 'GitLab Open Source',
+        description: 'Core contributions to GitLab Terraform Provider: auth redesign, new resources, and stability fixes.',
+        tech: ['Go', 'Terraform', 'CI/CD'],
+        link: '/projects/gitlab',
+        image: '/img/projects/gitlab-logo.png',
+        media: 'code',
+        icon: '</>',
+    },
+    {
+        title: 'RideSync',
+        description: 'Scalable microservices architecture with observability, resilient payment flow, and fault-tolerant eventing.',
+        tech: ['gRPC', 'K8s', 'MongoDB', 'Stripe', 'OpenTelemetry'],
+        link: 'https://vijetapriya47.github.io/RideSync/',
+        image: '/img/projects/hybrid-logistics.png',
+        media: 'network',
+        icon: '::',
+    },
+    {
+        title: 'Trading Low Latency System',
+        description: 'C++ event engine designed for ultra-fast execution with lock-free queues and shared-memory IPC.',
+        tech: ['C++', 'IPC', 'Lock-free'],
+        link: '/projects/trading-system',
+        media: 'latency',
+        icon: '2ms',
+    },
+];
 
 const ProjectsSection = () => (
-    <div className={styles.section}>
+    <div id="projects" className={styles.section}>
         <h2 className={styles.heading}>:: RUNNING_PROCESSES / PROJECTS</h2>
-        <div className={styles.grid}>
-            <div className={styles.card}>
-                <h3 className={styles.cardTitle}>Ride-Sharing Microservices</h3>
-                <div className={styles.techStack}>[gRPC] [K8s] [MongoDB] [Stripe] [OpenTelemetry]</div>
-                <p className={styles.description}>
-                    Distributed backend system ensuring "at-least-once delivery" and "idempotent consumers".
-                    Designed for high availability and fault tolerance.
-                </p>
-            </div>
-            <div className={styles.card}>
-                <h3 className={styles.cardTitle}>Trading Low Latency System</h3>
-                <div className={styles.techStack}>[C++] [IPC] [Lock-free]</div>
-                <p className={styles.description}>
-                    High-performance trading engine achieving 2ms latency for 10k events.
-                    Utilized lock-free data structures and shared memory IPC for maximum throughput.
-                </p>
-            </div>
+        <div className={styles.projectsGoogleGrid}>
+            {featuredProjects.map((project) => (
+                <article key={project.title} className={styles.googleCard}>
+                    <div className={styles.googleCardMedia}>
+                        {project.image ? (
+                            <img src={useBaseUrl(project.image)} alt={`${project.title} cover`} />
+                        ) : (
+                            <div className={`${styles.googleMediaPattern} ${styles[`googleMedia_${project.media}`]}`}>
+                                <span>{project.icon}</span>
+                            </div>
+                        )}
+                    </div>
+                    <div className={styles.googleCardTop}>
+                        <span className={styles.googleCardLabel}>Featured Project</span>
+                        <h3 className={styles.googleCardTitle}>{project.title}</h3>
+                    </div>
+
+                    <p className={styles.googleCardDescription}>{project.description}</p>
+
+                    <div className={styles.googleTags}>
+                        {project.tech.map((item) => (
+                            <span key={`${project.title}-${item}`} className={styles.googleTag}>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+
+                    <div className={styles.googleCardFooter}>
+                        <Link to={project.link} className={styles.googleCardLink}>
+                            Open Project
+                        </Link>
+                    </div>
+                </article>
+            ))}
         </div>
     </div>
 );
