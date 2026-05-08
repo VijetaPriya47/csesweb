@@ -22,8 +22,8 @@ export const projects: Project[] = [
     description: 'A comprehensive collection of solutions to CSES (Code Submission Evaluation System) problems. This project includes detailed explanations, multiple approaches, and optimized solutions for various algorithmic problems including Dynamic Programming, Graph Algorithms, Sorting, and Mathematics.',
     shortDescription: 'Comprehensive solutions to CSES competitive programming problems with detailed explanations and multiple approaches.',
     image: '/img/cses-solutions.png',
-    githubUrl: 'https://github.com/VijetaPriya47/csesweb',
-    liveUrl: 'https://vijetapriya47.github.io/csesweb/docs/cses/intro',
+    githubUrl: 'https://github.com/VijetaPriya47/vijetapriya47.github.io',
+    liveUrl: 'https://vijetapriya47.github.io/docs/cses/intro',
     techStack: ['C++', 'Python', 'Algorithms', 'Data Structures', 'Markdown'],
     category: 'competitive-programming',
     timeline: {
@@ -38,8 +38,8 @@ export const projects: Project[] = [
     description: 'A modern, responsive portfolio website built with Docusaurus showcasing my projects, achievements, and technical skills. Features GitHub-style design, dark/light theme toggle, and interactive project cards.',
     shortDescription: 'Modern portfolio website with GitHub-style design and interactive features.',
     image: '/img/portfolio.png',
-    githubUrl: 'https://github.com/VijetaPriya47/csesweb',
-    liveUrl: 'https://vijetapriya47.github.io/csesweb',
+    githubUrl: 'https://github.com/VijetaPriya47/vijetapriya47.github.io',
+    liveUrl: 'https://vijetapriya47.github.io/',
     techStack: ['React', 'TypeScript', 'Docusaurus', 'CSS', 'GitHub Pages'],
     category: 'web',
     timeline: {

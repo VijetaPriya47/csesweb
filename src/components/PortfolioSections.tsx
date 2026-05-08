@@ -46,7 +46,7 @@ const ResumeSection = () => (
                 </div>
                 <div className={styles.experienceItem}>
                     <div className={styles.logoContainer}>
-                    <img src="/csesweb/img/gitlab.png" alt="GitLab" className={styles.timelineLogo} />
+                    <img src="/img/gitlab.png" alt="GitLab" className={styles.timelineLogo} />
                     </div>
                     <div className={styles.meta}>
                         <span className={styles.date}>[2024 - Present]</span>
@@ -103,7 +103,7 @@ const ResumeSection = () => (
                 </div>
                 <div className={styles.experienceItem}>
                     <div className={styles.logoContainer}>
-                    <img src="/csesweb/img/jubilant.jpeg" alt="Jubilant Ingrevia" className={styles.timelineLogo} />
+                    <img src="/img/jubilant.jpeg" alt="Jubilant Ingrevia" className={styles.timelineLogo} />
                     </div>
                     <div className={styles.meta}>
                         <span className={styles.date}>[Jun 2025 - Jul 2025]</span>
@@ -122,7 +122,7 @@ const ResumeSection = () => (
                 </div>
                 <div className={styles.experienceItem}>
                     <div className={styles.logoContainer}>
-                    <img src="/csesweb/img/asksenior.jpeg" alt="Ask Senior" className={styles.timelineLogo} />
+                    <img src="/img/asksenior.jpeg" alt="Ask Senior" className={styles.timelineLogo} />
                     </div>
                     <div className={styles.meta}>
                         <span className={styles.date}>[2023 - 2024]</span>

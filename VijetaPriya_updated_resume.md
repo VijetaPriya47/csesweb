@@ -1,5 +1,5 @@
 # Vijeta Priya
-+91-8837360428 | vijeta004@gmail.com | [Portfolio](https://vijetapriya47.github.io/csesweb/)
++91-8837360428 | vijeta004@gmail.com | [Portfolio](https://vijetapriya47.github.io/)
 [Linkedin](https://linkedin.com/in/vzsaz) | [Codeforces](https://codeforces.com/profile/vijetapriya) | [Github](https://github.com/VijetaPriya47) | Leetcode | [Medium](https://medium.com/@vijeta004)
 
 **Software Engineer**

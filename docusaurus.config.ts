@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://github.com',
+  url: 'https://vijetapriya47.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/csesweb/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'VijetaPriya47', // Usually your GitHub org/user name.
-  projectName: 'csesweb', // Usually your repo name.
+  projectName: 'vijetapriya47.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
@@ -46,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/VijetaPriya47/csesweb/tree/main/',
+            'https://github.com/VijetaPriya47/vijetapriya47.github.io/tree/main/',
         },
         blog: false,
         theme: {
