@@ -1,5 +1,19 @@
 [
   {
+    "title": "The Hidden Architecture Behind Every Kubernetes Controller",
+    "link": "https://medium.com/@vijeta004/the-hidden-architecture-behind-every-kubernetes-controller-aca152363ed9?source=rss-f07908d154a3------2",
+    "pubDate": "Tue, 12 May 2026 21:58:34 GMT",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*YDrgGf9WgFW8vANhzOE41Q.png",
+    "description": "A first-time contributor’s guide to understanding the machinery that powers Kubernetes controllers.",
+    "categories": [
+      "open-source",
+      "cloud-native",
+      "system-design-concepts",
+      "documentation",
+      "kubernetes"
+    ]
+  },
+  {
     "title": "Day One of Debugging AWS containers",
     "link": "https://aws.plainenglish.io/debugging-aws-containers-day-one-629509a7d774?source=rss-f07908d154a3------2",
     "pubDate": "Wed, 06 May 2026 10:45:31 GMT",
