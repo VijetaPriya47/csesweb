@@ -1,7 +1,21 @@
 [
   {
+    "title": "Building Your First Real Controller: Workers, Reconcile, and the Queue",
+    "link": "https://blog.stackademic.com/building-your-first-real-controller-workers-reconcile-and-the-queue-73e09ba1bf42?source=rss-f07908d154a3------2",
+    "pubDate": "Sat, 16 May 2026 18:59:36 GMT",
+    "image": "https://cdn-images-1.medium.com/max/1024/1*h6c4-kcUgFCnh8MJFoGD8w.png",
+    "description": "Open a new file. Type package main. Now what? Building a Kubernetes controller from scratch feels like assembling furniture without the picture on the...",
+    "categories": [
+      "open-source",
+      "kubernetes",
+      "system-design-interview",
+      "golang",
+      "api"
+    ]
+  },
+  {
     "title": "The Informer Internals: What’s Really Happening Inside the Cache",
-    "link": "https://medium.com/@vijeta004/the-informer-internals-whats-really-happening-inside-the-cache-2cd7459fc7fa?source=rss-f07908d154a3------2",
+    "link": "https://blog.stackademic.com/the-informer-internals-whats-really-happening-inside-the-cache-2cd7459fc7fa?source=rss-f07908d154a3------2",
     "pubDate": "Sat, 16 May 2026 16:55:40 GMT",
     "image": "https://cdn-images-1.medium.com/max/720/1*Ck9X2Ji-xiZZwpv0QQ9DLw.jpeg",
     "description": "You’ve used informers. Now let’s open the hood.",
@@ -15,7 +29,7 @@
   },
   {
     "title": "The Hidden Architecture Behind Every Kubernetes Controller",
-    "link": "https://medium.com/@vijeta004/the-hidden-architecture-behind-every-kubernetes-controller-aca152363ed9?source=rss-f07908d154a3------2",
+    "link": "https://blog.stackademic.com/the-hidden-architecture-behind-every-kubernetes-controller-aca152363ed9?source=rss-f07908d154a3------2",
     "pubDate": "Tue, 12 May 2026 21:58:34 GMT",
     "image": "https://cdn-images-1.medium.com/max/1024/1*YDrgGf9WgFW8vANhzOE41Q.png",
     "description": "A first-time contributor’s guide to understanding the machinery that powers Kubernetes controllers.",
